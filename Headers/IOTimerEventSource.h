@@ -31,23 +31,23 @@
  */
 
 #ifndef _IOTIMEREVENTSOURCE
-#define <a name="_IOTIMEREVENTSOURCE" < a><b>_IOTIMEREVENTSOURCE</b>
+#define  _IOTIMEREVENTSOURCE = _IOTIMEREVENTSOURCE = 
 
-#include &lt;sys/cdefs.h&gt;
+#include <sys/cdefs.h>
 
 __BEGIN_DECLS
-#include &lt;kern/clock.h&gt;
+#include <kern/clock.h>
 __END_DECLS
 
-#include &lt;IOKit/IOEventSource.h&gt;
+#include <IOKit/IOEventSource.h>
 
 /*!
     @class IOTimerEventSource : public IOEventSource
     @abstract Time based event source mechanism.
     @discussion An event source that implements a simple timer.	 A timeout handler is called once the timeout period expires.  This timeout handler will be called by the work-loop that this event source is attached to.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 	Usually a timer event source will be used to implement a timeout.  In general when a driver makes a request it will need to setup a call to keep track of when the I/O doesn't complete.  This class is designed to make that somewhat easier.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 	Remember the system doesn't guarantee the accuracy of the callout.	It is possible that a higher priority thread is running which will delay the execution of the action routine.  In fact the thread will be made runable at the exact requested time, within the accuracy of the CPU's decrementer based interrupt, but the scheduler will then control execution.
 */
 class IOTimerEventSource : public IOEventSource
@@ -97,7 +97,7 @@ public:
     @discussion 'C' Function pointer defining the callout routine of this event source.
     @param owner Owning target object.	Note by a startling coincidence the first parameter in a C callout is currently used to define the target of a C++ member function.
     @param sender The object that timed out. */
-    typedef void (*Action)(OSObject *owner, IOTimerEventSource *<a name="sender" < a><b>sender</b>);
+    typedef void (*Action)(OSObject *owner, IOTimerEventSource * sender = sender = );
 
 /*! @function timerEventSource
     @abstract Allocates and returns an initialized timer instance.

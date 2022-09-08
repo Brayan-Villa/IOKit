@@ -39,24 +39,24 @@ HISTORY
 */
 
 #ifndef _IOKIT_IOINTERRUPTEVENTSOURCE_H
-#define <a name="_IOKIT_IOINTERRUPTEVENTSOURCE_H" < a><b>_IOKIT_IOINTERRUPTEVENTSOURCE_H</b>
+#define  _IOKIT_IOINTERRUPTEVENTSOURCE_H = _IOKIT_IOINTERRUPTEVENTSOURCE_H = 
 
-#include &lt;IOKit/IOEventSource.h&gt;
+#include <IOKit/IOEventSource.h>
 
 class IOService;
 
 /*! @class IOInterruptEventSource : public IOEventSource
     @abstract Event source for interrupt delivery to work-loop based drivers.
     @discussion The IOInterruptEventSource is a generic object that delivers calls interrupt routines in it's client in a guaranteed single-threaded manner.  IOInterruptEventSource is part of the IOKit $link IOWorkLoop infrastructure where the semantic that one and only one action method is executing within a work-loops event chain.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 When the action method is called in the client member function will receive 2 arguments, (IOEventSource *) sender and (int) count, See $link IOInterruptEventSource::Action.	Where sender will be reference to the interrupt that occured and the count will be computed by the difference between the $link producerCount and $link consumerCount.  This number may not be reliable as no attempt is made to adjust for around the world type problems but is provided for general information and statistic gathering.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 In general a client will use the factory member function to create and initialise the event source and then add it to their work-loop.  It is the work loop's responsiblity to maintain the new event source in it's event chain.  See $link IOWorkLoop.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 An interrupt event source attaches itself to the given provider's interrupt source at initialisation time.  At this time it determines if it is connected to a level or edge triggered interrupt.  If the interrupt is an level triggered interrupt the event source automatically disables the interrupt source at primary interrupt time and after it call's the client it automatically reenables the interrupt.  This action is fairly expensive but it is 100% safe and defaults sensibly so that the driver writer does not have to implement type dependant interrupt routines.  So to repeat, the driver writer does not have to be concerned by the actual underlying interrupt mechanism as the event source hides the complexity.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 Saying this if the hardware is a multi-device card, for instance a 4 port NIC, where all of the devices are sharing one level triggered interrupt AND it is possible to determine each port's interrupt state non-destructively then the $link IOFilterInterruptEventSource would be a better choice.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 Warning:  All IOInterruptEventSources are created in the disabled state.  If you want to actually schedule interrupt delivery do not forget to enable the source.
 */
 class IOInterruptEventSource : public IOEventSource
@@ -69,11 +69,11 @@ public:
     @param owner Pointer to client instance.
     @param sender Pointer to generation interrupt event source.
     @param count Number of interrupts seen before delivery. */
-    typedef void (*Action)(OSObject *, IOInterruptEventSource *, int <a name="count" < a><b>count</b>);
+    typedef void (*Action)(OSObject *, IOInterruptEventSource *, int  count = count = );
 
 /*! @defined IOInterruptEventAction
     @discussion Backward compatibilty define for the old non-class scoped type definition.  See $link IOInterruptEventSource::Action */
-#define <a name="IOInterruptEventAction" < a><b>IOInterruptEventAction</b> IOInterruptEventSource::Action
+#define  IOInterruptEventAction = IOInterruptEventAction =  IOInterruptEventSource::Action
 
 protected:
 /*! @var provider IOService that provides interrupts for delivery. */

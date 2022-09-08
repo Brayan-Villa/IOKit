@@ -25,11 +25,11 @@
  */
 
 #ifndef _IOKIT_IOUSERCLIENT_H
-#define <a name="_IOKIT_IOUSERCLIENT_H" < a><b>_IOKIT_IOUSERCLIENT_H</b>
+#define  _IOKIT_IOUSERCLIENT_H = _IOKIT_IOUSERCLIENT_H = 
 
-#include &lt;IOKit/IOTypes.h&gt;
-#include &lt;IOKit/IOService.h&gt;
-#include &lt;IOKit/OSMessageNotification.h&gt;
+#include <IOKit/IOTypes.h>
+#include <IOKit/IOService.h>
+#include <IOKit/OSMessageNotification.h>
 
 
 enum {
@@ -40,14 +40,14 @@ enum {
     kIOUCScalarIStructI = 4,
 };
 
-typedef IOReturn (IOService::*IOMethod)(void * <a name="p1" < a><b>p1</b>, void * <a name="p2" < a><b>p2</b>, void * <a name="p3" < a><b>p3</b>,
-                                        void * <a name="p4" < a><b>p4</b>, void * <a name="p5" < a><b>p5</b>, void * <a name="p6" < a><b>p6</b> );
+typedef IOReturn (IOService::*IOMethod)(void *  p1 = p1 = , void *  p2 = p2 = , void *  p3 = p3 = ,
+                                        void *  p4 = p4 = , void *  p5 = p5 = , void *  p6 = p6 =  );
 
-typedef IOReturn (IOService::*IOAsyncMethod)(OSAsyncReference <a name="asyncRef" < a><b>asyncRef</b>,
+typedef IOReturn (IOService::*IOAsyncMethod)(OSAsyncReference  asyncRef = asyncRef = ,
                                         void * p1, void * p2, void * p3,
                                         void * p4, void * p5, void * p6 );
 
-struct <a name="IOExternalMethod" < a><b>IOExternalMethod</b> {
+struct  IOExternalMethod = IOExternalMethod =  {
     IOService *		object;
     IOMethod		func;
     IOOptionBits	flags;
@@ -55,7 +55,7 @@ struct <a name="IOExternalMethod" < a><b>IOExternalMethod</b> {
     IOByteCount		count1;
 };
 
-struct <a name="IOExternalAsyncMethod" < a><b>IOExternalAsyncMethod</b> {
+struct  IOExternalAsyncMethod = IOExternalAsyncMethod =  {
     IOService *		object;
     IOAsyncMethod	func;
     IOOptionBits	flags;

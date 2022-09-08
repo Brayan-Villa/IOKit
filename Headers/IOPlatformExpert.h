@@ -37,13 +37,13 @@ Enter a symbol's name here to quickly find it.
 
 
 #ifndef _IOKIT_IOPLATFORMEXPERT_H
-#define <a name="_IOKIT_IOPLATFORMEXPERT_H" < a><b>_IOKIT_IOPLATFORMEXPERT_H</b>
+#define  _IOKIT_IOPLATFORMEXPERT_H = _IOKIT_IOPLATFORMEXPERT_H = 
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#include &lt;pexpert/pexpert.h&gt;
+#include <pexpert/pexpert.h>
 
 extern boolean_t PEGetMachineName( char * name, int maxLength );
 extern boolean_t PEGetModelName( char * name, int maxLength );
@@ -62,16 +62,16 @@ extern void PESetGMTTimeOfDay( long secs );
 #ifdef __cplusplus
 } /* extern "C" */
 
-#include &lt;IOKit/IOTypes.h&gt;
-#include &lt;IOKit/IOService.h&gt;
-#include &lt;IOKit/IOInterrupts.h&gt;
-#include &lt;IOKit/IOInterruptController.h&gt;
+#include <IOKit/IOTypes.h>
+#include <IOKit/IOService.h>
+#include <IOKit/IOInterrupts.h>
+#include <IOKit/IOInterruptController.h>
 
-extern OSSymbol * <a name="gPlatformInterruptControllerName" < a><b>gPlatformInterruptControllerName</b>;
+extern OSSymbol *  gPlatformInterruptControllerName = gPlatformInterruptControllerName = ;
 
-class <a name="IORangeAllocator" < a><b>IORangeAllocator</b>;
-class <a name="IONVRAMController" < a><b>IONVRAMController</b>;
-class <a name="IOPMrootDomain" < a><b>IOPMrootDomain</b>;
+class  IORangeAllocator = IORangeAllocator = ;
+class  IONVRAMController = IONVRAMController = ;
+class  IOPMrootDomain = IOPMrootDomain = ;
 
 class IOPlatformExpert : public IOService
 {

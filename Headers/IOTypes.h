@@ -27,27 +27,27 @@
  */
 
 #ifndef	__IOKIT_IOTYPES_H
-#define <a name="__IOKIT_IOTYPES_H" < a><b>__IOKIT_IOTYPES_H</b>
+#define  __IOKIT_IOTYPES_H = __IOKIT_IOTYPES_H = 
 
 #ifndef IOKIT
-#define <a name="IOKIT" < a><b>IOKIT</b> 1
+#define  IOKIT = IOKIT =  1
 #endif /* !IOKIT */
 
 #if KERNEL
-#include &lt;IOKit/system.h&gt;
+#include <IOKit/system.h>
 #else
-#include &lt;mach/message.h&gt;
-#include &lt;mach/vm_types.h&gt;
+#include <mach/message.h>
+#include <mach/vm_types.h>
 #endif
 
-#include &lt;IOKit/IOReturn.h&gt;
+#include <IOKit/IOReturn.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #ifndef	NULL
-#define	<a name="NULL" < a><b>NULL</b>	0
+#define	 NULL = NULL = 	0
 #endif
 	
 /*
@@ -56,12 +56,12 @@ extern "C" {
 #ifndef __MACTYPES__	/* CF MacTypes.h */
 #ifndef __TYPES__	/* guess... Mac Types.h */
 
-#include &lt;libkern/OSTypes.h&gt;
+#include <libkern/OSTypes.h>
 
 #ifndef __cplusplus
 #if !TYPE_BOOL
 #ifdef KERNEL
-typedef int	<a name="bool" < a><b>bool</b>;
+typedef int	 bool = bool = ;
 enum {
     false	= 0,
     true	= 1
@@ -73,23 +73,23 @@ enum {
 #endif /* __TYPES__ */
 #endif /* __MACTYPES__ */
 
-typedef UInt32		<a name="IOOptionBits" < a><b>IOOptionBits</b>;
-typedef SInt32		<a name="IOFixed" < a><b>IOFixed</b>;
-typedef UInt32		<a name="IOVersion" < a><b>IOVersion</b>;
-typedef UInt32		<a name="IOItemCount" < a><b>IOItemCount</b>;
-typedef UInt32  	<a name="IOCacheMode" < a><b>IOCacheMode</b>;
+typedef UInt32		 IOOptionBits = IOOptionBits = ;
+typedef SInt32		 IOFixed = IOFixed = ;
+typedef UInt32		 IOVersion = IOVersion = ;
+typedef UInt32		 IOItemCount = IOItemCount = ;
+typedef UInt32  	 IOCacheMode = IOCacheMode = ;
 
-typedef UInt32	 	<a name="IOByteCount" < a><b>IOByteCount</b>;
+typedef UInt32	 	 IOByteCount = IOByteCount = ;
 
-typedef vm_address_t	 <a name="IOVirtualAddress" < a><b>IOVirtualAddress</b>;
-typedef IOVirtualAddress <a name="IOLogicalAddress" < a><b>IOLogicalAddress</b>;
+typedef vm_address_t	  IOVirtualAddress = IOVirtualAddress = ;
+typedef IOVirtualAddress  IOLogicalAddress = IOLogicalAddress = ;
 
 #if 0
 
-typedef UInt64	<a name="IOPhysicalAddress" < a><b>IOPhysicalAddress</b>;
-typedef UInt64	<a name="IOPhysicalLength" < a><b>IOPhysicalLength</b>;
-#define <a name="IOPhysical32" < a><b>IOPhysical32</b>( hi, lo )		((UInt64) lo + ((UInt64)(hi) &lt;&lt; 32))
-#define <a name="IOPhysSize" < a><b>IOPhysSize</b>	64
+typedef UInt64	 IOPhysicalAddress = IOPhysicalAddress = ;
+typedef UInt64	 IOPhysicalLength = IOPhysicalLength = ;
+#define  IOPhysical32 = IOPhysical32 = ( hi, lo )		((UInt64) lo + ((UInt64)(hi) << 32))
+#define  IOPhysSize = IOPhysSize = 	64
 
 #else
 
@@ -106,42 +106,42 @@ typedef UInt32	IOPhysicalLength;
 typedef struct {
 	int value;
 	const char *name;
-} <a name="IONamedValue" < a><b>IONamedValue</b>;
+}  IONamedValue = IONamedValue = ;
 
 
 /*
  * Memory alignment -- specified as a power of two.
  */
-typedef unsigned int	<a name="IOAlignment" < a><b>IOAlignment</b>;
+typedef unsigned int	 IOAlignment = IOAlignment = ;
 
-#define <a name="IO_NULL_VM_TASK" < a><b>IO_NULL_VM_TASK</b>		((vm_task_t)0)
+#define  IO_NULL_VM_TASK = IO_NULL_VM_TASK = 		((vm_task_t)0)
 
 
 /*
  * Pull in machine specific stuff.
  */
 
-//#include &lt;IOKit/machine/IOTypes.h&gt;
+//#include <IOKit/machine/IOTypes.h>
 
 #ifndef MACH_KERNEL
 
 #ifndef __IOKIT_PORTS_DEFINED__
-#define <a name="__IOKIT_PORTS_DEFINED__" < a><b>__IOKIT_PORTS_DEFINED__</b>
+#define  __IOKIT_PORTS_DEFINED__ = __IOKIT_PORTS_DEFINED__ = 
 #ifdef KERNEL
-typedef struct OSObject * <a name="io_object_t" < a><b>io_object_t</b>;
+typedef struct OSObject *  io_object_t = io_object_t = ;
 #else /* KERNEL */
 typedef mach_port_t	io_object_t;
 #endif /* KERNEL */
 #endif /* __IOKIT_PORTS_DEFINED__ */
 
-#include &lt;device/device_types.h&gt;
+#include <device/device_types.h>
 
-typedef io_object_t	<a name="io_connect_t" < a><b>io_connect_t</b>;
-typedef io_object_t	<a name="io_iterator_t" < a><b>io_iterator_t</b>;
-typedef io_object_t	<a name="io_registry_entry_t" < a><b>io_registry_entry_t</b>;
-typedef io_object_t	<a name="io_service_t" < a><b>io_service_t</b>;
+typedef io_object_t	 io_connect_t = io_connect_t = ;
+typedef io_object_t	 io_iterator_t = io_iterator_t = ;
+typedef io_object_t	 io_registry_entry_t = io_registry_entry_t = ;
+typedef io_object_t	 io_service_t = io_service_t = ;
 
-typedef io_object_t	<a name="io_enumerator_t" < a><b>io_enumerator_t</b>;
+typedef io_object_t	 io_enumerator_t = io_enumerator_t = ;
 
 #endif /* MACH_KERNEL */
 
@@ -163,10 +163,10 @@ enum {
 
     kIOMapCacheMask		= 0x00000300,
     kIOMapCacheShift		= 8,
-    kIOMapDefaultCache		= kIODefaultCache   &lt;&lt; kIOMapCacheShift,
-    kIOMapInhibitCache		= kIOInhibitCache   &lt;&lt; kIOMapCacheShift,
-    kIOMapWriteThruCache	= kIOWriteThruCache &lt;&lt; kIOMapCacheShift,
-    kIOMapCopybackCache		= kIOCopybackCache  &lt;&lt; kIOMapCacheShift,
+    kIOMapDefaultCache		= kIODefaultCache   << kIOMapCacheShift,
+    kIOMapInhibitCache		= kIOInhibitCache   << kIOMapCacheShift,
+    kIOMapWriteThruCache	= kIOWriteThruCache << kIOMapCacheShift,
+    kIOMapCopybackCache		= kIOCopybackCache  << kIOMapCacheShift,
 
     kIOMapUserOptionsMask	= 0x00000fff,
 
@@ -200,11 +200,11 @@ typedef enum {
         IO_CacheOff,                    // cache inhibit
         IO_WriteThrough,
         IO_CopyBack
-} <a name="IOCache" < a><b>IOCache</b>;
+}  IOCache = IOCache = ;
 
-//typedef char <a name="OSString" < a><b>OSString</b>[64];
-typedef unsigned int <a name="IODeviceNumber" < a><b>IODeviceNumber</b>;
-typedef unsigned int <a name="IOObjectNumber" < a><b>IOObjectNumber</b>;
+//typedef char  OSString = OSString = [64];
+typedef unsigned int  IODeviceNumber = IODeviceNumber = ;
+typedef unsigned int  IOObjectNumber = IOObjectNumber = ;
 
 #endif
 

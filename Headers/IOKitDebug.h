@@ -37,16 +37,16 @@ Enter a symbol's name here to quickly find it.
 
 
 #ifndef _IOKIT_IOKITDEBUG_H
-#define <a name="_IOKIT_IOKITDEBUG_H" < a><b>_IOKIT_IOKITDEBUG_H</b>
+#define  _IOKIT_IOKITDEBUG_H = _IOKIT_IOKITDEBUG_H = 
 
-#include &lt;IOKit/IOTypes.h&gt;
+#include <IOKit/IOTypes.h>
 
 
 #ifdef __cplusplus
 
-#include &lt;libkern/c++/OSObject.h&gt;
-#include &lt;libkern/c++/OSDictionary.h&gt;
-#include &lt;libkern/c++/OSSerialize.h&gt;
+#include <libkern/c++/OSObject.h>
+#include <libkern/c++/OSDictionary.h>
+#include <libkern/c++/OSSerialize.h>
 
 class IOKitDiagnostics : public OSObject
 {

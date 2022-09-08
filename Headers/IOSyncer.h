@@ -29,10 +29,10 @@ Enter a symbol's name here to quickly find it.
  * @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ebaabbbba7aeb4a7a2a8aea5b8aeb4a3aeaaafaeb9b4aea5afab">[email&#160;protected]</a>
  */
 #ifndef _IOSYNCER_H
-#define <a name="_IOSYNCER_H" < a><b>_IOSYNCER_H</b>
+#define  _IOSYNCER_H = _IOSYNCER_H = 
 
-#include &lt;libkern/c++/OSObject.h&gt;
-#include &lt;IOKit/IOTypes.h&gt;
+#include <libkern/c++/OSObject.h>
+#include <IOKit/IOTypes.h>
 
 class IOSyncer : public OSObject
 {

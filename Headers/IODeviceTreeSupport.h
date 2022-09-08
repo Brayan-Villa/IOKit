@@ -36,23 +36,23 @@ Enter a symbol's name here to quickly find it.
  */
 
 #ifndef _IOKIT_IODEVICETREE_H
-#define <a name="_IOKIT_IODEVICETREE_H" < a><b>_IOKIT_IODEVICETREE_H</b>
+#define  _IOKIT_IODEVICETREE_H = _IOKIT_IODEVICETREE_H = 
 
-#include &lt;IOKit/IORegistryEntry.h&gt;
-#include &lt;libkern/c++/OSData.h&gt;
+#include <IOKit/IORegistryEntry.h>
+#include <libkern/c++/OSData.h>
 
-class <a name="IODeviceMemory" < a><b>IODeviceMemory</b>;
+class  IODeviceMemory = IODeviceMemory = ;
 class IOService;
 
-extern const IORegistryPlane *	<a name="gIODTPlane" < a><b>gIODTPlane</b>;
+extern const IORegistryPlane *	 gIODTPlane = gIODTPlane = ;
 
-extern const OSSymbol *		<a name="gIODTCompatibleKey" < a><b>gIODTCompatibleKey</b>;
-extern const OSSymbol * 	<a name="gIODTTypeKey" < a><b>gIODTTypeKey</b>;
-extern const OSSymbol * 	<a name="gIODTModelKey" < a><b>gIODTModelKey</b>;
+extern const OSSymbol *		 gIODTCompatibleKey = gIODTCompatibleKey = ;
+extern const OSSymbol * 	 gIODTTypeKey = gIODTTypeKey = ;
+extern const OSSymbol * 	 gIODTModelKey = gIODTModelKey = ;
 
-extern const OSSymbol *		<a name="gIODTAAPLInterruptsKey" < a><b>gIODTAAPLInterruptsKey</b>;
-extern const OSSymbol *		<a name="gIODTDefaultInterruptController" < a><b>gIODTDefaultInterruptController</b>;
-extern const OSSymbol *		<a name="gIODTNWInterruptMappingKey" < a><b>gIODTNWInterruptMappingKey</b>;
+extern const OSSymbol *		 gIODTAAPLInterruptsKey = gIODTAAPLInterruptsKey = ;
+extern const OSSymbol *		 gIODTDefaultInterruptController = gIODTDefaultInterruptController = ;
+extern const OSSymbol *		 gIODTNWInterruptMappingKey = gIODTNWInterruptMappingKey = ;
 
 IORegistryEntry * IODeviceTreeAlloc( void * dtTop );
 
@@ -72,10 +72,10 @@ OSCollectionIterator * IODTFindMatchingEntries( IORegistryEntry * from,
 			IOOptionBits options, const char * keys );
 
 typedef SInt32 (*IODTCompareAddressCellFunc)
-	(UInt32 <a name="cellCount" < a><b>cellCount</b>, UInt32 <a name="left" < a><b>left</b>[], UInt32 <a name="right" < a><b>right</b>[]);
+	(UInt32  cellCount = cellCount = , UInt32  left = left = [], UInt32  right = right = []);
 typedef void (*IODTNVLocationFunc)
-	(IORegistryEntry * <a name="entry" < a><b>entry</b>,
-	UInt8 * <a name="busNum" < a><b>busNum</b>, UInt8 * <a name="deviceNum" < a><b>deviceNum</b>, UInt8 * <a name="functionNum" < a><b>functionNum</b> );
+	(IORegistryEntry *  entry = entry = ,
+	UInt8 *  busNum = busNum = , UInt8 *  deviceNum = deviceNum = , UInt8 *  functionNum = functionNum =  );
 
 void IODTSetResolving( IORegistryEntry * 	regEntry,
 		IODTCompareAddressCellFunc	compareFunc,
@@ -91,7 +91,7 @@ OSArray * IODTResolveAddressing( IORegistryEntry * regEntry,
 
 #pragma options align=mac68k
 
-struct <a name="IONVRAMDescriptor" < a><b>IONVRAMDescriptor</b> {
+struct  IONVRAMDescriptor = IONVRAMDescriptor =  {
     unsigned int format:4;
     unsigned int marker:1;
     unsigned int bridgeCount:3;

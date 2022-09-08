@@ -50,21 +50,21 @@ Enter a symbol's name here to quickly find it.
  * drivers built in or dynamically loaded into the Window Server.  They do not
  * exist in any shared library.
  *
- * --&gt; They're now in IOKit user lib.
+ * --> They're now in IOKit user lib.
  */
 
 #ifndef _IOKIT_IOSHAREDLOCK_H
-#define <a name="_IOKIT_IOSHAREDLOCK_H" < a><b>_IOKIT_IOSHAREDLOCK_H</b>
+#define  _IOKIT_IOSHAREDLOCK_H = _IOKIT_IOSHAREDLOCK_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 // should be 32 bytes on PPC
-typedef volatile int		<a name="IOSharedLockData" < a><b>IOSharedLockData</b>;
-typedef <a name="IOSharedLock" < a><b>IOSharedLock</b>Data    *   IOSharedLock;
+typedef volatile int		 IOSharedLockData = IOSharedLockData;
+typedef  IOSharedLock = IOSharedLockData    *   IOSharedLock;
 
-#define <a name="IOSpinLockInit" < a><b>IOSpinLockInit</b>(l)	(*(l) = (IOSpinLockData)0)
+#define  IOSpinLockInit = IOSpinLockInit(l)	(*(l) = (IOSpinLockData)0)
 
 extern void IOSpinLock(IOSharedLock l);
 extern void IOSpinUnlock(IOSharedLock l);
@@ -72,12 +72,12 @@ extern boolean_t IOTrySpinLock(IOSharedLock l);
 
 /* exact same stuff &amp; implementation */
 
-typedef IOSharedLockData 	<a name="ev_lock_data_t" < a><b>ev_lock_data_t</b>;
-typedef ev_lock_data_t	    *	<a name="ev_lock_t" < a><b>ev_lock_t</b>;
+typedef IOSharedLockData 	 ev_lock_data_t = ev_lock_data_t;
+typedef ev_lock_data_t	    *	 ev_lock_t = ev_lock_t;
 
-#define <a name="ev_init_lock" < a><b>ev_init_lock</b>(l)		(*(l) = (ev_lock_data_t)0)
+#define  ev_init_lock = ev_init_lock(l)		(*(l) = (ev_lock_data_t)0)
 // needs isync?
-//#define <a name="ev_is_locked" < a><b>ev_is_locked</b>(l)	(*(l) != (ev_lock_data_t)0)
+//#define  ev_is_locked = ev_is_locked(l)	(*(l) != (ev_lock_data_t)0)
 
 extern void ev_lock(ev_lock_t l);		// Spin lock!
 extern void ev_unlock(ev_lock_t l);

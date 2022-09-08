@@ -36,42 +36,42 @@ Enter a symbol's name here to quickly find it.
  */
 
 #ifndef __IOKIT_IOLIB_H
-#define <a name="__IOKIT_IOLIB_H" < a><b>__IOKIT_IOLIB_H</b>
+#define  __IOKIT_IOLIB_H = __IOKIT_IOLIB_H = 
 
 #ifndef KERNEL
 #error IOLib.h is for kernel use only
 #endif
 
 #ifndef IOKIT_DEPRECATED
-#define <a name="IOKIT_DEPRECATED" < a><b>IOKIT_DEPRECATED</b>	1
+#define  IOKIT_DEPRECATED = IOKIT_DEPRECATED = 	1
 #endif
 
-#include &lt;IOKit/system.h&gt;
+#include <IOKit/system.h>
 
-#include &lt;IOKit/IOReturn.h&gt;
-#include &lt;IOKit/IOTypes.h&gt;
-#include &lt;IOKit/IOLocks.h&gt;
+#include <IOKit/IOReturn.h>
+#include <IOKit/IOTypes.h>
+#include <IOKit/IOLocks.h>
 
-#include &lt;libkern/OSAtomic.h&gt;
+#include <libkern/OSAtomic.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#include &lt;kern/thread_call.h&gt;
-#include &lt;kern/clock.h&gt;
+#include <kern/thread_call.h>
+#include <kern/clock.h>
 /*
  * min/max macros.
  */
 
-#define <a name="min" < a><b>min</b>(a,b) ((a) &lt; (b) ? (a) : (b))
-#define <a name="max" < a><b>max</b>(a,b) ((a) &gt; (b) ? (a) : (b))
+#define  min = min = (a,b) ((a) < (b) ? (a) : (b))
+#define  max = max = (a,b) ((a) > (b) ? (a) : (b))
 
 /*
  * These are opaque to the user.
  */
-typedef thread_t <a name="IOThread" < a><b>IOThread</b>;
-typedef void (*IOThreadFunc)(void *<a name="argument" < a><b>argument</b>);
+typedef thread_t  IOThread = IOThread = ;
+typedef void (*IOThreadFunc)(void * argument = argument = );
 
 /*
  * Memory allocation functions.
@@ -132,8 +132,8 @@ void   IOFreeContiguous(void * address, vm_size_t size);
 /*
  * Typed memory allocation macros. Both may block.
  */
-#define <a name="IONew" < a><b>IONew</b>(type,number)        (type*)IOMalloc(sizeof(type) * (number) )
-#define <a name="IODelete" < a><b>IODelete</b>(ptr,type,number) IOFree( (ptr) , sizeof(type) * (number) )
+#define  IONew = IONew = (type,number)        (type*)IOMalloc(sizeof(type) * (number) )
+#define  IODelete = IODelete = (ptr,type,number) IOFree( (ptr) , sizeof(type) * (number) )
 
 /*! @function IOSetProcessorCacheMode
     @abstract Sets the processor cache mode for mapped memory.
@@ -141,9 +141,9 @@ void   IOFreeContiguous(void * address, vm_size_t size);
     @param task Task the memory is mapped into.
     @param address Virtual address of the memory.
     @param length Length of the range to set.
-    @param cacheMode A constant from IOTypes.h, &lt;br&gt;
-	kIOMapDefaultCache to inhibit the cache in I/O areas, kIOMapCopybackCache in general purpose RAM.&lt;br&gt;
-	kIOMapInhibitCache, kIOMapWriteThruCache, kIOMapCopybackCache to set the appropriate caching.&lt;br&gt; 
+    @param cacheMode A constant from IOTypes.h, <br>
+	kIOMapDefaultCache to inhibit the cache in I/O areas, kIOMapCopybackCache in general purpose RAM.<br>
+	kIOMapInhibitCache, kIOMapWriteThruCache, kIOMapCopybackCache to set the appropriate caching.<br> 
     @result An IOReturn code.*/
 
 IOReturn IOSetProcessorCacheMode( task_t task, IOVirtualAddress address,
@@ -164,7 +164,7 @@ IOReturn IOFlushProcessorCache( task_t task, IOVirtualAddress address,
     @abstract Returns the osfmk identifier for the currently running thread.
     @discussion This function returns the current thread (a pointer to the currently active osfmk thread_shuttle). */
 
-#define <a name="IOThreadSelf" < a><b>IOThreadSelf</b>() (current_thread())
+#define  IOThreadSelf = IOThreadSelf = () (current_thread())
 
 /*! @function IOCreateThread
     @abstract Create a kernel thread.
@@ -240,22 +240,22 @@ unsigned int IOAlignmentToSize(IOAlignment align);
 
 static inline IOFixed IOFixedMultiply(IOFixed a, IOFixed b)
 {
-    return (IOFixed)((((SInt64) a) * ((SInt64) b)) &gt;&gt; 16);
+    return (IOFixed)((((SInt64) a) * ((SInt64) b)) >> 16);
 }
 
 static inline IOFixed IOFixedDivide(IOFixed a, IOFixed b)
 {
-    return (IOFixed)((((SInt64) a) &lt;&lt; 16) / ((SInt64) b));
+    return (IOFixed)((((SInt64) a) << 16) / ((SInt64) b));
 }
 
 /*
  * IORound and IOTrunc convenience functions, in the spirit
  * of vm's round_page() and trunc_page().
  */
-#define <a name="IORound" < a><b>IORound</b>(value,multiple) \
+#define  IORound = IORound = (value,multiple) \
         ((((value) + (multiple) - 1) / (multiple)) * (multiple))
 
-#define <a name="IOTrunc" < a><b>IOTrunc</b>(value,multiple) \
+#define  IOTrunc = IOTrunc = (value,multiple) \
         (((value) / (multiple)) * (multiple));
 
 
@@ -264,7 +264,7 @@ static inline IOFixed IOFixedDivide(IOFixed a, IOFixed b)
 /* The following API is deprecated */
 
 #undef eieio
-#define <a name="eieio" < a><b>eieio</b>() \
+#define  eieio = eieio = () \
     OSSynchronizeIO()
 
 void IOPanic(const char *reason);

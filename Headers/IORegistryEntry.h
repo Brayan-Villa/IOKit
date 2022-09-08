@@ -37,21 +37,21 @@ Enter a symbol's name here to quickly find it.
 
 
 #ifndef _IOKIT_IOREGISTRYENTRY_H
-#define <a name="_IOKIT_IOREGISTRYENTRY_H" < a><b>_IOKIT_IOREGISTRYENTRY_H</b>
+#define  _IOKIT_IOREGISTRYENTRY_H = _IOKIT_IOREGISTRYENTRY_H = 
 
-#include &lt;IOKit/IOTypes.h&gt;
-#include &lt;libkern/c++/OSContainers.h&gt;
+#include <IOKit/IOTypes.h>
+#include <libkern/c++/OSContainers.h>
 
 
-extern const OSSymbol * <a name="gIONameKey" < a><b>gIONameKey</b>;
-extern const OSSymbol * <a name="gIOLocationKey" < a><b>gIOLocationKey</b>;
+extern const OSSymbol *  gIONameKey = gIONameKey = ;
+extern const OSSymbol *  gIOLocationKey = gIOLocationKey = ;
 
-class <a name="IORegistryEntry" < a><b>IORegistryEntry</b>;
-class <a name="IORegistryPlane" < a><b>IORegistryPlane</b>;
-class <a name="IORegistryIterator" < a><b>IORegistryIterator</b>;
+class  IORegistryEntry = IORegistryEntry = ;
+class  IORegistryPlane = IORegistryPlane = ;
+class  IORegistryIterator = IORegistryIterator = ;
 
 typedef void (*IORegistryEntryApplierFunction)(IORegistryEntry * entry,
-                                               void * <a name="context" < a><b>context</b>);
+                                               void *  context = context = );
 
 
 /*! @class IORegistryEntry : public OSObject
@@ -515,7 +515,7 @@ public:
 
 /*! @function fromPath
     @abstract Looks up a registry entry by path.
-    @discussion This function parses paths to lookup registry entries. The path may begin with the &lt;plane name&gt;: created by getPath, or the plane may be set by the caller. If there are characters remaining unparsed after an entry has been looked up, this may be considered an invalid lookup, or those characters may be passed back to the caller and the lookup successful.
+    @discussion This function parses paths to lookup registry entries. The path may begin with the <plane name>: created by getPath, or the plane may be set by the caller. If there are characters remaining unparsed after an entry has been looked up, this may be considered an invalid lookup, or those characters may be passed back to the caller and the lookup successful.
     @param path A C-string path.
     @param plane The plane to lookup up the path, or zero, in which case the path must begin with the plane name.
     @param residualPath If the path may contain residual characters after the last path component, the residual will be copied back to the caller's residualPath buffer. If there are residual characters and no residual buffer is specified, fromPath will fail.

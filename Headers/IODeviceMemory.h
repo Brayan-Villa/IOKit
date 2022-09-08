@@ -36,9 +36,9 @@ Enter a symbol's name here to quickly find it.
  */
 
 #ifndef _IOKIT_IODEVICEMEMORY_H
-#define <a name="_IOKIT_IODEVICEMEMORY_H" < a><b>_IOKIT_IODEVICEMEMORY_H</b>
+#define  _IOKIT_IODEVICEMEMORY_H = _IOKIT_IODEVICEMEMORY_H = 
 
-#include &lt;IOKit/IOMemoryDescriptor.h&gt;
+#include <IOKit/IOMemoryDescriptor.h>
 
 /*! @class IODeviceMemory : public IOMemoryDescriptor
     @abstract An IOMemoryDescriptor used for device physical memory ranges.
@@ -55,7 +55,7 @@ public:
     @field length Length of the range.
     @field tag 32-bit value not interpreted by IODeviceMemory or IOMemoryDescriptor, for use by the bus family. */
 
-    struct <a name="InitElement" < a><b>InitElement</b> {
+    struct  InitElement = InitElement =  {
         IOPhysicalAddress	start;
         IOPhysicalLength	length;
         IOOptionBits 		tag;

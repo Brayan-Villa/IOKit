@@ -36,9 +36,9 @@ Enter a symbol's name here to quickly find it.
  */
 
 #ifndef _IOKIT_IONOTIFIER_H
-#define <a name="_IOKIT_IONOTIFIER_H" < a><b>_IOKIT_IONOTIFIER_H</b>
+#define  _IOKIT_IONOTIFIER_H = _IOKIT_IONOTIFIER_H = 
 
-#include &lt;libkern/c++/OSObject.h&gt;
+#include <libkern/c++/OSObject.h>
 
 /*! @class IONotifier : public OSObject
     @abstract An abstract base class defining common methods for controlling a notification request.

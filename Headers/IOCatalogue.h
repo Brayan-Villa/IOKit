@@ -28,18 +28,18 @@
 
 
 #ifndef _IOKIT_IOCATALOGUE_H
-#define <a name="_IOKIT_IOCATALOGUE_H" < a><b>_IOKIT_IOCATALOGUE_H</b>
+#define  _IOKIT_IOCATALOGUE_H = _IOKIT_IOCATALOGUE_H = 
 
-#include &lt;libkern/c++/OSObject.h&gt;
-#include &lt;libkern/c++/OSCollectionIterator.h&gt;
-#include &lt;libkern/c++/OSArray.h&gt;
-#include &lt;libkern/c++/OSDictionary.h&gt;
-#include &lt;IOKit/IOLocks.h&gt;
-#include &lt;sys/cdefs.h&gt;
+#include <libkern/c++/OSObject.h>
+#include <libkern/c++/OSCollectionIterator.h>
+#include <libkern/c++/OSArray.h>
+#include <libkern/c++/OSDictionary.h>
+#include <IOKit/IOLocks.h>
+#include <sys/cdefs.h>
 
-#include &lt;IOKit/IOKitServer.h&gt;
+#include <IOKit/IOKitServer.h>
 
-class <a name="IOService" < a><b>IOService</b>;
+class  IOService = IOService = ;
 
 /*!
     @class IOCatalogue
@@ -217,17 +217,17 @@ __BEGIN_DECLS
     @function IOKitRelocStart
     @abstract Deprecated API.
 */
-kmod_start_func_t <a name="IOKitRelocStart" < a><b>IOKitRelocStart</b>;
+kmod_start_func_t  IOKitRelocStart = IOKitRelocStart = ;
 /*!
     @function IOKitRelocStop
     @abstract Deprecated API.
 */
-kmod_stop_func_t <a name="IOKitRelocStop" < a><b>IOKitRelocStop</b>;
+kmod_stop_func_t  IOKitRelocStop = IOKitRelocStop = ;
 __END_DECLS
 
-extern const OSSymbol *		<a name="gIOClassKey" < a><b>gIOClassKey</b>;
-extern const OSSymbol *		<a name="gIOProbeScoreKey" < a><b>gIOProbeScoreKey</b>;
-extern IOCatalogue *            <a name="gIOCatalogue" < a><b>gIOCatalogue</b>;
+extern const OSSymbol *		 gIOClassKey = gIOClassKey = ;
+extern const OSSymbol *		 gIOProbeScoreKey = gIOProbeScoreKey = ;
+extern IOCatalogue *             gIOCatalogue = gIOCatalogue = ;
 
 #endif /* ! _IOKIT_IOCATALOGUE_H */
 

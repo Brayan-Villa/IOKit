@@ -29,9 +29,9 @@ Enter a symbol's name here to quickly find it.
  * @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="adecfdfde1e8f2e1e4eee8e3fee8f2e5e8ece9e8fff2e8e3e9ed">[email&#160;protected]</a>
  */
 #ifndef _IOBUFFERMEMORYDESCRIPTOR_H
-#define <a name="_IOBUFFERMEMORYDESCRIPTOR_H" < a><b>_IOBUFFERMEMORYDESCRIPTOR_H</b>
+#define  _IOBUFFERMEMORYDESCRIPTOR_H = _IOBUFFERMEMORYDESCRIPTOR_H = 
 
-#include &lt;IOKit/IOMemoryDescriptor.h&gt;
+#include <IOKit/IOMemoryDescriptor.h>
 
 class IOBufferMemoryDescriptor : public IOGeneralMemoryDescriptor
 {

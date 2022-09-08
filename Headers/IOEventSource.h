@@ -37,33 +37,33 @@ HISTORY
 	Converted to C++
 */
 #ifndef _IOKIT_IOEVENTSOURCE_H
-#define <a name="_IOKIT_IOEVENTSOURCE_H" < a><b>_IOKIT_IOEVENTSOURCE_H</b>
+#define  _IOKIT_IOEVENTSOURCE_H = _IOKIT_IOEVENTSOURCE_H = 
 
-#include &lt;sys/cdefs.h&gt;
+#include <sys/cdefs.h>
 
-#include &lt;libkern/c++/OSObject.h&gt;
+#include <libkern/c++/OSObject.h>
 
-#include &lt;IOKit/IOLib.h&gt;
-#include &lt;IOKit/system.h&gt;
+#include <IOKit/IOLib.h>
+#include <IOKit/system.h>
 
 __BEGIN_DECLS
-#include &lt;mach/clock_types.h&gt;
-#include &lt;kern/clock.h&gt;
+#include <mach/clock_types.h>
+#include <kern/clock.h>
 __END_DECLS
 
-class <a name="IOWorkLoop" < a><b>IOWorkLoop</b>;
+class  IOWorkLoop = IOWorkLoop = ;
 
 /*!
     @class IOEventSource : public OSObject
     @abstract Abstract class for all work-loop event sources.
     @discussion The IOEventSource declares the abstract super class that all
 event sources must inherit from if an IOWorkLoop is to receive events from them.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 	An event source can represent any event that should cause the work-loop of a
 device to wake up and perform work.  Two examples of event sources are the
 IOInterruptEventSource which delivers interrupt notifications and IOCommandGate
 which delivers command requests.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 	A kernel module can always use the work-loop model for serialising access to
 anything at all.  The IOEventSource is used for communicating events to the
 work-loop, and the chain of event sources should be used to walk the possible
@@ -71,14 +71,14 @@ event sources and demultipex them.  Note a particular instance of an event
 source may only be a member of 1 linked list chain.  If you need to move it
 between chains than make sure it is removed from the original chain before
 attempting to move it.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 	The IOEventSource makes no attempt to maintain the consitency of it's internal data across multi-threading.  It is assumed that the user of these basic tools will protect the data that these objects represent in some sort of device wide instance lock.	For example the IOWorkLoop maintains the event chain by handing off change request to its own thread and thus single threading access to its state.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 	All subclasses of the IOEventSource are expected to implement the checkForWork() member function.
 
-&lt;br&gt;&lt;br&gt;
+<br><br>
 	checkForWork() is the key method in this class.	 It is called by some work-loop when convienient and is expected to evaluate it's internal state and determine if an event has occured since the last call.  In the case of an event having occurred then the instance defined target(owner)/action will be called.	 The action is stored as an ordinary C function pointer but the first parameter is always the owner.  This means that a C++ member function can be used as an action function though this depends on the ABI.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 	Although the eventChainNext variable contains a reference to the next event source in the chain this reference is not retained.  The list 'owner' i.e. the client that creates the event, not the work-loop, is expected to retain the source.
 */
 class IOEventSource : public OSObject
@@ -97,11 +97,11 @@ and be of some type, this is that type.
 during initialisation.	 Note if a C++ function was specified this parameter
 is implicitly the first paramter in the target member function's parameter list.
 */
-    typedef void (*Action)(OSObject *<a name="owner" < a><b>owner</b>, ...);
+    typedef void (*Action)(OSObject * owner = owner = , ...);
 
 /*! @defined IOEventSourceAction
     @discussion Backward compatibilty define for the old non-class scoped type definition.  See $link IOEventSource::Action */
- #define <a name="IOEventSourceAction" < a><b>IOEventSourceAction</b> IOEventSource::Action
+ #define  IOEventSourceAction = IOEventSourceAction =  IOEventSource::Action
 
 protected:
 /*! @var eventChainNext
@@ -208,7 +208,7 @@ state when checkForWork is called. */
     virtual IOWorkLoop *getWorkLoop() const;
 
 /*! @function onThread
-    @abstract Convenience function for workLoop-&gt;onThread.
+    @abstract Convenience function for workLoop->onThread.
     @result true if called on the work-loop thread.
 */
     virtual bool onThread() const;

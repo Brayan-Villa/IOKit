@@ -28,18 +28,18 @@ Enter a symbol's name here to quickly find it.
  * 
  * @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="521302021e170d1e1b11171c01170d1a17131617000d171c1612">[email&#160;protected]</a>
  */
-#include &lt;libkern/c++/OSObject.h&gt;
-#include &lt;IOKit/IOLocks.h&gt;
+#include <libkern/c++/OSObject.h>
+#include <IOKit/IOLocks.h>
 class IOPMinformee;
-class <a name="IOPMinformeeList" < a><b>IOPMinformeeList</b>;
-class <a name="IOPMchangeNoteList" < a><b>IOPMchangeNoteList</b>;
-class <a name="IOPMpmChild" < a><b>IOPMpmChild</b>;
+class  IOPMinformeeList = IOPMinformeeList = ;
+class  IOPMchangeNoteList = IOPMchangeNoteList = ;
+class  IOPMpmChild = IOPMpmChild = ;
 class IOWorkLoop;
 class IOCommandQueue;
-class <a name="IOTimerEventSource" < a><b>IOTimerEventSource</b>;
+class  IOTimerEventSource = IOTimerEventSource = ;
 class IOPlatformExpert;
 
-#include &lt;IOKit/pwr_mgt/IOPM.h&gt;
+#include <IOKit/pwr_mgt/IOPM.h>
 
 
 /*!
@@ -48,7 +48,7 @@ class IOPlatformExpert;
 notification from an interested driver or the controlling driver its ack timer is ticking every tenth of a second.
 (100000000 nanoseconds are one tenth of a second).
 */
- #define <a name="ACK_TIMER_PERIOD" < a><b>ACK_TIMER_PERIOD</b> 100000000
+ #define  ACK_TIMER_PERIOD = ACK_TIMER_PERIOD =  100000000
 
 
 /*!
@@ -57,22 +57,22 @@ notification from an interested driver or the controlling driver its ack timer i
 Inputs are acks from interested parties, ack from the controlling driver,
 ack timeouts, settle timeout, and powerStateDidChange from the parent.
 */
-#define <a name="IOPMour_prechange_1" < a><b>IOPMour_prechange_1</b>		1
-#define <a name="IOPMour_prechange_2" < a><b>IOPMour_prechange_2</b>		2
-#define <a name="IOPMour_prechange_3" < a><b>IOPMour_prechange_3</b>		3
-#define <a name="IOPMour_prechange_4" < a><b>IOPMour_prechange_4</b>		4
-#define <a name="IOPMparent_prechange_down_3" < a><b>IOPMparent_prechange_down_3</b>	5
-#define <a name="IOPMparent_prechange_down_4" < a><b>IOPMparent_prechange_down_4</b>	6
-#define <a name="IOPMparent_prechange_down_5" < a><b>IOPMparent_prechange_down_5</b>	7
-#define <a name="IOPMparent_postchange_down_1" < a><b>IOPMparent_postchange_down_1</b>	8
-#define <a name="IOPMparent_postchange_down_2" < a><b>IOPMparent_postchange_down_2</b>	9
-#define <a name="IOPMparent_prechange_up_1" < a><b>IOPMparent_prechange_up_1</b>	10
-#define <a name="IOPMparent_postchange_up_1" < a><b>IOPMparent_postchange_up_1</b>	11
-#define <a name="IOPMparent_postchange_up_4" < a><b>IOPMparent_postchange_up_4</b>	12
-#define <a name="IOPMparent_postchange_up_5" < a><b>IOPMparent_postchange_up_5</b>	13
-#define <a name="IOPMparent_postchange_up_6" < a><b>IOPMparent_postchange_up_6</b>	14
-#define <a name="IOPMparent_postchange_null" < a><b>IOPMparent_postchange_null</b>	15
-#define <a name="IOPMfinished" < a><b>IOPMfinished</b>			16
+#define  IOPMour_prechange_1 = IOPMour_prechange_1 = 		1
+#define  IOPMour_prechange_2 = IOPMour_prechange_2 = 		2
+#define  IOPMour_prechange_3 = IOPMour_prechange_3 = 		3
+#define  IOPMour_prechange_4 = IOPMour_prechange_4 = 		4
+#define  IOPMparent_prechange_down_3 = IOPMparent_prechange_down_3 = 	5
+#define  IOPMparent_prechange_down_4 = IOPMparent_prechange_down_4 = 	6
+#define  IOPMparent_prechange_down_5 = IOPMparent_prechange_down_5 = 	7
+#define  IOPMparent_postchange_down_1 = IOPMparent_postchange_down_1 = 	8
+#define  IOPMparent_postchange_down_2 = IOPMparent_postchange_down_2 = 	9
+#define  IOPMparent_prechange_up_1 = IOPMparent_prechange_up_1 = 	10
+#define  IOPMparent_postchange_up_1 = IOPMparent_postchange_up_1 = 	11
+#define  IOPMparent_postchange_up_4 = IOPMparent_postchange_up_4 = 	12
+#define  IOPMparent_postchange_up_5 = IOPMparent_postchange_up_5 = 	13
+#define  IOPMparent_postchange_up_6 = IOPMparent_postchange_up_6 = 	14
+#define  IOPMparent_postchange_null = IOPMparent_postchange_null = 	15
+#define  IOPMfinished = IOPMfinished = 			16
 
 /*!
 @class IOPMpriv : public OSObject

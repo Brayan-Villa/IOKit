@@ -35,7 +35,7 @@ Enter a symbol's name here to quickly find it.
  *
  */
 
-enum <a name="IOMessage" < a><b>IOMessage</b>
+enum  IOMessage = IOMessage = 
 {
     kIOMessageServiceIsTerminated	= 0x80000010,
     kIOMessageServiceIsSuspended	= 0x80000020,

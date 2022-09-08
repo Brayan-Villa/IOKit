@@ -29,12 +29,12 @@ Enter a symbol's name here to quickly find it.
  * @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b9f8e9e9f5fce6f5f0fafcf7eafce6f1fcf8fdfcebe6fcf7fdf9">[email&#160;protected]</a>
  */
 #ifndef _IOMEMORYCURSOR_H
-#define <a name="_IOMEMORYCURSOR_H" < a><b>_IOMEMORYCURSOR_H</b>
+#define  _IOMEMORYCURSOR_H = _IOMEMORYCURSOR_H = 
 
-#include &lt;libkern/c++/OSObject.h&gt;
-#include &lt;IOKit/IOTypes.h&gt;
+#include <libkern/c++/OSObject.h>
+#include <IOKit/IOTypes.h>
 
-class <a name="IOMemoryDescriptor" < a><b>IOMemoryDescriptor</b>;
+class  IOMemoryDescriptor = IOMemoryDescriptor = ;
 
 /**************************** class IOMemoryCursor ***************************/
 
@@ -43,9 +43,9 @@ class <a name="IOMemoryDescriptor" < a><b>IOMemoryDescriptor</b>;
     @abstract A mechanism to convert memory references to physical addresses.
     @discussion The IOMemoryCursor declares the super class that all
 specific memory cursors must inherit from, but a memory cursor can be created without a specific format subclass by just providing a segment function to the initializers.  This class does the difficult stuff of dividing a memory descriptor into a physical scatter/gather list appropriate for the target hardware.
-&lt;br&gt;&lt;br&gt;
+<br><br>
     A driver is expected to create a memory cursor and configure it to the limitations of it's DMA hardware; for instance the memory cursor used by the firewire SBP2 protocol has a maximum physical segment size of 2^16 - 1 but the actual transfer size is unlimited.  Thus it would create a cursor with a maxSegmentSize of 65535 and a maxTransfer size of UINT_MAX.   It would also provide a SegmentFunction that can output a pagelist entry.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 Below is the simplest example of a SegmentFunction:-
 void IONaturalMemoryCursor::outputSegment(PhysicalSegment segment,
 					  void *	  outSegments,
@@ -64,7 +64,7 @@ public:
     @typedef PhysicalSegment
     @discussion A physical address/length pair.
 */
-    struct <a name="PhysicalSegment" < a><b>PhysicalSegment</b>
+    struct  PhysicalSegment = PhysicalSegment = 
     {
 	IOPhysicalAddress location;
 	IOPhysicalLength  length;
@@ -72,7 +72,7 @@ public:
 
 /*! @defined IOPhysicalSegment
     @discussion Backward compatibilty define for the old non-class scoped type definition.  See $link IOMemoryCursor::PhysicalSegment */
-#define <a name="IOPhysicalSegment" < a><b>IOPhysicalSegment</b> IOMemoryCursor::PhysicalSegment
+#define  IOPhysicalSegment = IOPhysicalSegment =  IOMemoryCursor::PhysicalSegment
 
 /*!
     @typedef SegmentFunction
@@ -83,11 +83,11 @@ public:
 */
     typedef void (*SegmentFunction)(PhysicalSegment segment,
 				    void *	    segments,
-				    UInt32	    <a name="segmentIndex" < a><b>segmentIndex</b>);
+				    UInt32	     segmentIndex = segmentIndex = );
 
 /*! @defined OutputSegmentFunc
     @discussion Backward compatibilty define for the old non-class scoped type definition.  See $link IOMemoryCursor::SegmentFunction */
-#define <a name="OutputSegmentFunc" < a><b>OutputSegmentFunc</b> IOMemoryCursor::SegmentFunction
+#define  OutputSegmentFunc = OutputSegmentFunc =  IOMemoryCursor::SegmentFunction
 
 protected:
 /*! @var outSeg The action method called when an event has been delivered */
@@ -178,7 +178,7 @@ public:
 
 /*! @defined naturalOutputSegment
     @discussion Backward compatibilty define for the old global function definition.  See $link IONaturalMemoryCursor::outputSegment */
-#define <a name="naturalOutputSegment" < a><b>naturalOutputSegment</b> IONaturalMemoryCursor::outputSegment
+#define  naturalOutputSegment = naturalOutputSegment =  IONaturalMemoryCursor::outputSegment
 
 /*! @function withSpecification
     @abstract Factory function to create and initialise an IONaturalMemoryCursor in one operation, see $link IONaturalMemoryCursor::initWithSpecification.
@@ -252,7 +252,7 @@ public:
 
 /*! @defined bigOutputSegment
     @discussion Backward compatibilty define for the old global function definition.  See $link IOBigMemoryCursor::outputSegment */
-#define <a name="bigOutputSegment" < a><b>bigOutputSegment</b> IOBigMemoryCursor::outputSegment
+#define  bigOutputSegment = bigOutputSegment =  IOBigMemoryCursor::outputSegment
 
 /*! @function withSpecification
     @abstract Factory function to create and initialise an IOBigMemoryCursor in one operation, see $link IOBigMemoryCursor::initWithSpecification.
@@ -326,7 +326,7 @@ public:
 
 /*! @defined littleOutputSegment
     @discussion Backward compatibilty define for the old global function definition.  See $link IOLittleMemoryCursor::outputSegment */
-#define <a name="littleOutputSegment" < a><b>littleOutputSegment</b> IOLittleMemoryCursor::outputSegment
+#define  littleOutputSegment = littleOutputSegment =  IOLittleMemoryCursor::outputSegment
 
 /*! @function withSpecification
     @abstract Factory function to create and initialise an IOLittleMemoryCursor in one operation, see $link IOLittleMemoryCursor::initWithSpecification.
@@ -402,7 +402,7 @@ public:
 			      void *	      segments,
 			      UInt32	      segmentIndex);
 
-/*! @defined <a name="dbdmaOutputSegment" < a><b>dbdmaOutputSegment</b>
+/*! @defined  dbdmaOutputSegment = dbdmaOutputSegment = 
     @discussion Backward compatibilty define for the old global function definition.  See $link IODBDMAMemoryCursor::outputSegment */
 #define dbdmaOutputSegment IODBDMAMemoryCursor::outputSegment
 

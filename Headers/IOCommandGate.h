@@ -35,9 +35,9 @@ Enter a symbol's name here to quickly find it.
 /*! @language embedded-c++ */
 
 #ifndef _IOKIT_IOCOMMANDGATE_H
-#define <a name="_IOKIT_IOCOMMANDGATE_H" < a><b>_IOKIT_IOCOMMANDGATE_H</b>
+#define  _IOKIT_IOCOMMANDGATE_H = _IOKIT_IOCOMMANDGATE_H = 
 
-#include &lt;IOKit/IOEventSource.h&gt;
+#include <IOKit/IOEventSource.h>
 
 /*!
     @class IOCommandGate : public IOEventSource
@@ -49,14 +49,14 @@ event source.  Using the work-loop gate rather than execution by the workloop.
 The command gate tests for a potential self dead lock by checking if the
 runCommand request is made from the work-loop's thread, it doens't check for a
 mutual dead lock though where a pair of work loop's dead lock each other.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 	The IOCommandGate is a lighter weight version of the IOCommandQueue and
 should be used in preference.  Generally use a command queue whenever you need a
 client to submit a request to a work loop.  A typical command gate action would
 check if the hardware is active, if so it will add the request to a pending
 queue internal to the device or the device's family.  Otherwise if the hardware
 is inactive then this request can be acted upon immediately.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 	CAUTION: The runAction and runCommand functions can not be called from an interrupt context.
 
 */
@@ -83,7 +83,7 @@ member function's parameter list.
 */
     typedef IOReturn (*Action)(OSObject *owner,
 			       void *arg0, void *arg1,
-			       void *arg2, void *<a name="arg3" < a><b>arg3</b>);
+			       void *arg2, void * arg3 = arg3 = );
 
 protected:
 /*!

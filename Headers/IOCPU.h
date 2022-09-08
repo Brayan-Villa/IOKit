@@ -15,24 +15,24 @@ Enter a symbol's name here to quickly find it.
  */
 
 #ifndef _IOKIT_CPU_H
-#define <a name="_IOKIT_CPU_H" < a><b>_IOKIT_CPU_H</b>
+#define  _IOKIT_CPU_H = _IOKIT_CPU_H = 
 
 extern "C" {
-#include &lt;machine/machine_routines.h&gt;
-#include &lt;pexpert/pexpert.h&gt;
+#include <machine/machine_routines.h>
+#include <pexpert/pexpert.h>
 }
 
-#include &lt;IOKit/IOService.h&gt;
-#include &lt;IOKit/IOInterruptController.h&gt;
+#include <IOKit/IOService.h>
+#include <IOKit/IOInterruptController.h>
 
-#define <a name="kIOCPUStateUnregistered" < a><b>kIOCPUStateUnregistered</b> (0)
-#define <a name="kIOCPUStateUninitalized" < a><b>kIOCPUStateUninitalized</b> (1)
-#define <a name="kIOCPUStateStopped" < a><b>kIOCPUStateStopped</b>      (2)
-#define <a name="kIOCPUStateRunning" < a><b>kIOCPUStateRunning</b>      (3)
+#define  kIOCPUStateUnregistered = kIOCPUStateUnregistered =  (0)
+#define  kIOCPUStateUninitalized = kIOCPUStateUninitalized =  (1)
+#define  kIOCPUStateStopped = kIOCPUStateStopped =       (2)
+#define  kIOCPUStateRunning = kIOCPUStateRunning =       (3)
 
-class <a name="IOCPUInterruptController" < a><b>IOCPUInterruptController</b>;
+class  IOCPUInterruptController = IOCPUInterruptController = ;
 
-extern IOCPUInterruptController *<a name="gIOCPUInterruptController" < a><b>gIOCPUInterruptController</b>;
+extern IOCPUInterruptController * gIOCPUInterruptController = gIOCPUInterruptController = ;
 
 class IOCPU : public IOService
 {

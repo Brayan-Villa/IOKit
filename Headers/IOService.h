@@ -37,26 +37,26 @@ Enter a symbol's name here to quickly find it.
 
 
 #ifndef _IOKIT_IOSERVICE_H
-#define <a name="_IOKIT_IOSERVICE_H" < a><b>_IOKIT_IOSERVICE_H</b>
+#define  _IOKIT_IOSERVICE_H = _IOKIT_IOSERVICE_H = 
 
-#include &lt;IOKit/IORegistryEntry.h&gt;
-#include &lt;IOKit/IOReturn.h&gt;
-#include &lt;IOKit/IODeviceMemory.h&gt;
-#include &lt;IOKit/IONotifier.h&gt;
-#include &lt;IOKit/IOLocks.h&gt;
+#include <IOKit/IORegistryEntry.h>
+#include <IOKit/IOReturn.h>
+#include <IOKit/IODeviceMemory.h>
+#include <IOKit/IONotifier.h>
+#include <IOKit/IOLocks.h>
 
-#include &lt;IOKit/IOKitDebug.h&gt;
-#include &lt;IOKit/IOInterrupts.h&gt;
+#include <IOKit/IOKitDebug.h>
+#include <IOKit/IOInterrupts.h>
 
-class <a name="IOPMinformee" < a><b>IOPMinformee</b>;
-#include &lt;IOKit/pwr_mgt/IOPMpowerState.h&gt;
-#include &lt;IOKit/IOServicePM.h&gt;
+class  IOPMinformee = IOPMinformee = ;
+#include <IOKit/pwr_mgt/IOPMpowerState.h>
+#include <IOKit/IOServicePM.h>
 
 enum {
     kIODefaultProbeScore 	= 0
 };
 
-// masks for <a name="getState" < a><b>getState</b>()
+// masks for  getState = getState = ()
 enum {
     kIOServiceInactiveState	= 0x00000001,
     kIOServiceRegisteredState	= 0x00000002,
@@ -65,56 +65,56 @@ enum {
     kIOServiceFirstMatchState	= 0x00000010
 };
 
-// options for <a name="registerService" < a><b>registerService</b>()
+// options for  registerService = registerService = ()
 enum {
     kIOServiceExclusive		= 0x00000001,
     kIOServiceSynchronous	= 0x00000002,
 };
 
-// options for <a name="terminate" < a><b>terminate</b>()
+// options for  terminate = terminate = ()
 enum {
     kIOServiceRequired		= 0x00000001
 };
 
-// options for <a name="open" < a><b>open</b>()
+// options for  open = open = ()
 enum {
     kIOServiceSeize		= 0x00000001,
     kIOServiceFamilyOpenOptions = 0xffff0000
 };
 
-// options for <a name="close" < a><b>close</b>()
+// options for  close = close = ()
 enum {
     kIOServiceFamilyCloseOptions = 0xffff0000
 };
 
-typedef void * <a name="IONotificationRef" < a><b>IONotificationRef</b>;
+typedef void *  IONotificationRef = IONotificationRef = ;
 
-extern const IORegistryPlane *	<a name="gIOServicePlane" < a><b>gIOServicePlane</b>;
+extern const IORegistryPlane *	 gIOServicePlane = gIOServicePlane = ;
 
-extern const OSSymbol *		<a name="gIOResourcesKey" < a><b>gIOResourcesKey</b>;
-extern const OSSymbol *		<a name="gIOResourceMatchKey" < a><b>gIOResourceMatchKey</b>;
-extern const OSSymbol *		<a name="gIOProviderClassKey" < a><b>gIOProviderClassKey</b>;
-extern const OSSymbol * 	<a name="gIONameMatchKey" < a><b>gIONameMatchKey</b>;
-extern const OSSymbol *		<a name="gIONameMatchedKey" < a><b>gIONameMatchedKey</b>;
-extern const OSSymbol *		<a name="gIOLocationMatchKey" < a><b>gIOLocationMatchKey</b>;
-extern const OSSymbol *		<a name="gIOPathMatchKey" < a><b>gIOPathMatchKey</b>;
-extern const OSSymbol *		<a name="gIOMatchCategoryKey" < a><b>gIOMatchCategoryKey</b>;
-extern const OSSymbol *		<a name="gIODefaultMatchCategoryKey" < a><b>gIODefaultMatchCategoryKey</b>;
-extern const OSSymbol *		<a name="gIOKitDebugKey" < a><b>gIOKitDebugKey</b>;
-extern const OSSymbol *		<a name="gIOServiceKey" < a><b>gIOServiceKey</b>;
+extern const OSSymbol *		 gIOResourcesKey = gIOResourcesKey = ;
+extern const OSSymbol *		 gIOResourceMatchKey = gIOResourceMatchKey = ;
+extern const OSSymbol *		 gIOProviderClassKey = gIOProviderClassKey = ;
+extern const OSSymbol * 	 gIONameMatchKey = gIONameMatchKey = ;
+extern const OSSymbol *		 gIONameMatchedKey = gIONameMatchedKey = ;
+extern const OSSymbol *		 gIOLocationMatchKey = gIOLocationMatchKey = ;
+extern const OSSymbol *		 gIOPathMatchKey = gIOPathMatchKey = ;
+extern const OSSymbol *		 gIOMatchCategoryKey = gIOMatchCategoryKey = ;
+extern const OSSymbol *		 gIODefaultMatchCategoryKey = gIODefaultMatchCategoryKey = ;
+extern const OSSymbol *		 gIOKitDebugKey = gIOKitDebugKey = ;
+extern const OSSymbol *		 gIOServiceKey = gIOServiceKey = ;
 
-extern const OSSymbol *		<a name="gIOPublishNotification" < a><b>gIOPublishNotification</b>;
-extern const OSSymbol *		<a name="gIOFirstPublishNotification" < a><b>gIOFirstPublishNotification</b>;
-extern const OSSymbol *		<a name="gIOMatchedNotification" < a><b>gIOMatchedNotification</b>;
-extern const OSSymbol *		<a name="gIOFirstMatchNotification" < a><b>gIOFirstMatchNotification</b>;
-extern const OSSymbol *		<a name="gIOTerminatedNotification" < a><b>gIOTerminatedNotification</b>;
+extern const OSSymbol *		 gIOPublishNotification = gIOPublishNotification = ;
+extern const OSSymbol *		 gIOFirstPublishNotification = gIOFirstPublishNotification = ;
+extern const OSSymbol *		 gIOMatchedNotification = gIOMatchedNotification = ;
+extern const OSSymbol *		 gIOFirstMatchNotification = gIOFirstMatchNotification = ;
+extern const OSSymbol *		 gIOTerminatedNotification = gIOTerminatedNotification = ;
 
-extern const OSSymbol *		<a name="gIOGeneralInterest" < a><b>gIOGeneralInterest</b>;
-extern const OSSymbol *		<a name="gIOBusyInterest" < a><b>gIOBusyInterest</b>;
+extern const OSSymbol *		 gIOGeneralInterest = gIOGeneralInterest = ;
+extern const OSSymbol *		 gIOBusyInterest = gIOBusyInterest = ;
 
-extern const OSSymbol *		<a name="gIODeviceMemoryKey" < a><b>gIODeviceMemoryKey</b>;
-extern const OSSymbol *		<a name="gIOInterruptControllersKey" < a><b>gIOInterruptControllersKey</b>;
-extern const OSSymbol *		<a name="gIOInterruptSpecifiersKey" < a><b>gIOInterruptSpecifiersKey</b>;
+extern const OSSymbol *		 gIODeviceMemoryKey = gIODeviceMemoryKey = ;
+extern const OSSymbol *		 gIOInterruptControllersKey = gIOInterruptControllersKey = ;
+extern const OSSymbol *		 gIOInterruptSpecifiersKey = gIOInterruptSpecifiersKey = ;
 
 extern SInt32 IOServiceOrdering( OSObject * obj1, OSObject * obj2, void * ref );
 
@@ -127,7 +127,7 @@ typedef void (*IOInterruptAction)( OSObject * target, void * refCon,
     @param newService The IOService object the notification is delivering. It is retained for the duration of the handler's invocation and doesn't need to be released by the handler. */
 
 typedef bool (*IOServiceNotificationHandler)( void * target, void * refCon,
-                  IOService * <a name="newService" < a><b>newService</b> );
+                  IOService *  newService = newService =  );
 
 /*! @typedef IOServiceInterestHandler
     @param target Reference supplied when the notification was registered.
@@ -138,14 +138,14 @@ typedef bool (*IOServiceNotificationHandler)( void * target, void * refCon,
     @param argSize Non zero if the argument represents a struct of that size, used when delivering messages outside the kernel. */
 
 typedef IOReturn (*IOServiceInterestHandler)( void * target, void * refCon,
-                                              UInt32 <a name="messageType" < a><b>messageType</b>, IOService * <a name="provider" < a><b>provider</b>,
-                                              void * <a name="messageArgument" < a><b>messageArgument</b>, vm_size_t <a name="argSize" < a><b>argSize</b> );
+                                              UInt32  messageType = messageType = , IOService *  provider = provider = ,
+                                              void *  messageArgument = messageArgument = , vm_size_t  argSize = argSize =  );
 
-typedef void (*IOServiceApplierFunction)(IOService * <a name="service" < a><b>service</b>, void * context);
-typedef void (*OSObjectApplierFunction)(OSObject * <a name="object" < a><b>object</b>, void * context);
+typedef void (*IOServiceApplierFunction)(IOService *  service = service = , void * context);
+typedef void (*OSObjectApplierFunction)(OSObject *  object = object = , void * context);
 
-class <a name="IOUserClient" < a><b>IOUserClient</b>;
-class <a name="IOPlatformExpert" < a><b>IOPlatformExpert</b>;
+class  IOUserClient = IOUserClient = ;
+class  IOPlatformExpert = IOPlatformExpert = ;
 
 /*! @class IOService : public IORegistryEntry
     @abstract The base class for most families, devices and drivers.
@@ -157,7 +157,7 @@ Matching dictionaries are associated with IOService classes by the catalogue, as
 
 IOService provides matching based on c++ class (via OSMetaClass dynamic casting), registry entry name, a registry path to the service (which includes OpenFirmware paths), a name assigned by BSD, or by its location (its point of attachment).
 
-&lt;br&gt;&lt;br&gt;Driver Instantiation by IOService&lt;br&gt;&lt;br&gt;
+<br><br>Driver Instantiation by IOService<br><br>
 
 Drivers are subclasses of IOService, and their availability is managed through the catalogue. They are instantiated based on the publication of an IOService they use (for example, an IOPCIDevice or IOUSBDevice), or when they are added to  the catalogue and the IOService(s) they use are already available.
 
@@ -175,53 +175,53 @@ The driver should only consider itself in action when the start method is called
 
 After the drivers have all synchronously been started, the installed "matched" notifications that match the registered IOService are delivered.
 
-&lt;br&gt;&lt;br&gt;Properties used by IOService&lt;br&gt;&lt;br&gt;
+<br><br>Properties used by IOService<br><br>
 
 	kIOClassKey, extern const OSSymbol * gIOClassKey, "IOClass"
-&lt;br&gt;
+<br>
 Class of the driver to instantiate on matching providers.
-&lt;br&gt;
-&lt;br&gt;
+<br>
+<br>
 	kIOProviderClassKey, extern const OSSymbol * gIOProviderClassKey, "IOProviderClass"
-&lt;br&gt;
+<br>
 Class of the provider(s) to be considered for matching, checked with OSDynamicCast so subclasses will also match.
-&lt;br&gt;
-&lt;br&gt;
+<br>
+<br>
 	kIOProbeScoreKey, extern const OSSymbol * gIOProbeScoreKey, "IOProbeScore"
-&lt;br&gt;
+<br>
 The probe score initially used to order multiple matching drivers.
-&lt;br&gt;
-&lt;br&gt;
+<br>
+<br>
 	kIOMatchCategoryKey, extern const OSSymbol * gIOMatchCategoryKey, "IOMatchCategory"
-&lt;br&gt;
+<br>
 A string defining the driver category for matching purposes. All drivers with no IOMatchCategory property are considered to be in the same default category. Only one driver in a category can be started on each provider.
-&lt;br&gt;
-&lt;br&gt;
+<br>
+<br>
 	kIONameMatchKey, extern const OSSymbol * gIONameMatchKey, "IONameMatch"
-&lt;br&gt;
+<br>
 A string or collection of strings that match the provider's name. The comparison is implemented with the IORegistryEntry::compareNames method, which supports a single string, or any collection (OSArray, OSSet, OSDictionary etc.) of strings. IOService objects with OpenFirmware device tree properties (eg. IOPCIDevice) will also be matched based on that standard's "compatible", "name", device_type" properties. The matching name will be left in the driver's property table in the kIONameMatchedKey property.
-&lt;br&gt;
+<br>
 Examples
-&lt;br&gt;
-      &amp;ltkey&amp;gtIONameMatch&amp;lt/key&amp;gt		&lt;br&gt;
+<br>
+      &amp;ltkey&amp;gtIONameMatch&amp;lt/key&amp;gt		<br>
 	&amp;ltstring&amp;gtpci106b,7&amp;ltstring&amp;gt
-&lt;br&gt;
+<br>
 For a list of possible matching names, a serialized array of strings should used, eg.
-&lt;br&gt;
-      &amp;ltkey&amp;gtIONameMatch&amp;lt/key&amp;gt		&lt;br&gt;
-	&amp;ltarray&amp;gt				&lt;br&gt;
-		&amp;ltstring&amp;gtAPPL,angry16&amp;lt/string&amp;gt	&lt;br&gt;
-		&amp;ltstring&amp;gtpci106b,7&amp;ltstring&amp;gt	&lt;br&gt;
+<br>
+      &amp;ltkey&amp;gtIONameMatch&amp;lt/key&amp;gt		<br>
+	&amp;ltarray&amp;gt				<br>
+		&amp;ltstring&amp;gtAPPL,angry16&amp;lt/string&amp;gt	<br>
+		&amp;ltstring&amp;gtpci106b,7&amp;ltstring&amp;gt	<br>
 	&amp;lt/array&amp;gt
-&lt;br&gt;
-&lt;br&gt;
+<br>
+<br>
 	kIONameMatchedKey, extern const OSSymbol * gIONameMatchedKey, "IONameMatched"
-&lt;br&gt;
+<br>
 The name successfully matched name from the kIONameMatchKey property will be left in the driver's property table as the kIONameMatchedKey property.
-&lt;br&gt;
-&lt;br&gt;
+<br>
+<br>
 	kIOKitDebugKey, extern const OSSymbol * gIOKitDebugKey, "IOKitDebug"
-&lt;br&gt;
+<br>
 Set some debug flags for logging the driver loading process. Flags are defined in IOKit/IOKitDebug.h, but 65535 works well.
 
 */
@@ -457,11 +457,11 @@ public:
     @abstract Add a persistant notification handler to be notified of IOService events.
     @discussion IOService will deliver notifications of changes in state of an IOService to registered clients. The type of notification is specified by a symbol, for example gIOMatchedNotification or gIOTerminatedNotification, and notifications will only include IOService's that match the supplied matching dictionary. Notifications are ordered by a priority set with addNotification. When the notification is installed, its handler will be called with each of any currently existing IOService's that are in the correct state (eg. registered) and match the supplied matching dictionary, avoiding races between finding preexisting and new IOService events. The notification request is identified by an instance of an IONotifier object, through which it can be enabled, disabled or removed. addNotification will consume a retain count on the matching dictionary when the notification is removed.
     @param type An OSSymbol identifying the type of notification and IOService state:
-&lt;br&gt;	gIOPublishNotification Delivered when an IOService is registered.
-&lt;br&gt;	gIOFirstPublishNotification Delivered when an IOService is registered, but only once per IOService instance. Some IOService's may be reregistered when their state is changed.
-&lt;br&gt;	gIOMatchedNotification Delivered when an IOService has been matched with all client drivers, and they have been probed and started.
-&lt;br&gt;	gIOFirstMatchNotification Delivered when an IOService has been matched with all client drivers, but only once per IOService instance. Some IOService's may be reregistered when their state is changed.
-&lt;br&gt;	gIOTerminatedNotification Delivered after an IOService has been terminated, during its finalize stage.
+<br>	gIOPublishNotification Delivered when an IOService is registered.
+<br>	gIOFirstPublishNotification Delivered when an IOService is registered, but only once per IOService instance. Some IOService's may be reregistered when their state is changed.
+<br>	gIOMatchedNotification Delivered when an IOService has been matched with all client drivers, and they have been probed and started.
+<br>	gIOFirstMatchNotification Delivered when an IOService has been matched with all client drivers, but only once per IOService instance. Some IOService's may be reregistered when their state is changed.
+<br>	gIOTerminatedNotification Delivered after an IOService has been terminated, during its finalize stage.
     @param matching A matching dictionary to restrict notifications to only matching IOServices. The dictionary will be released when the notification is removed - consuming the passed in reference.
     @param handler A C-function callback to deliver notifications.
     @param target An instance reference for the callbacks use.
@@ -638,7 +638,7 @@ public:
     virtual IOService * getProvider( void ) const;
 
 /*! @function getWorkLoop
-    @abstract Returns the current work loop or provider-&gt;getWorkLoop().
+    @abstract Returns the current work loop or provider->getWorkLoop().
     @discussion This function returns a valid work loop that a client can use to add an IOCommandGate to.  The intention is that an IOService client has data that needs to be protected but doesn't want to pay the cost of an entire dedicated thread.  This data has to be accessed from a providers call out context as well.  So to achieve both of these goals the client creates an IOCommandGate to lock access to his data but he registers it with the providers work loop, i.e. the work loop which will make the completion call outs.  In one fell swoop we avoid a potentially nasty deadlock 'cause a work loop's gate is recursive.
     @result Always returns a work loop, either the current work loop or it walks up the $link getProvider() chain calling getWorkLoop.  Eventually it will reach a valid work loop based driver or the root of the io tree where it will return a system wide work loop.  Returns 0 if it fails to find (or create) */
 
@@ -753,7 +753,7 @@ public:
     @param target An object instance to be passed to the interrupt handler.
     @param handler The C-function to be to be called at primary interrupt time when the interrupt occurs. The handler should process the interrupt by clearing the interrupt, or by disabling the source.
     @param refCon A reference constant for the handler's use.
-    @result An IOReturn code.&lt;br&gt;kIOReturnNoInterrupt is returned if the source is not valid.&lt;br&gt;kIOReturnNoResources is returned if the interrupt already has an installed handler. */
+    @result An IOReturn code.<br>kIOReturnNoInterrupt is returned if the source is not valid.<br>kIOReturnNoResources is returned if the interrupt already has an installed handler. */
 
     virtual IOReturn registerInterrupt(int source, OSObject *target,
 				       IOInterruptAction handler,
@@ -763,7 +763,7 @@ public:
     @abstract Remove a C-function interrupt handler for a device supplying hardware interrupts.
     @discussion This method will remove a C-function interrupt handler previously installed with registerInterrupt.
     @param source The index of the interrupt source in the device.
-    @result An IOReturn code.&lt;br&gt;kIOReturnNoInterrupt is returned if the source is not valid. */
+    @result An IOReturn code.<br>kIOReturnNoInterrupt is returned if the source is not valid. */
 
     virtual IOReturn unregisterInterrupt(int source);
 
@@ -771,8 +771,8 @@ public:
     @abstract Return the type of interrupt used for a device supplying hardware interrupts.
     @discussion This method will return the type of interrupt used by the device.
     @param source The index of the interrupt source in the device.
-    @param interruptType The interrupt type for the interrupt source will be stored here by getInterruptType.&lt;br&gt; kIOInterruptTypeEdge will be returned for edge trigggered sources.&lt;br&gt; kIOInterruptTypeLevel will be returned for level trigggered sources.
-    @result An IOReturn code.&lt;br&gt;kIOReturnNoInterrupt is returned if the source is not valid. */
+    @param interruptType The interrupt type for the interrupt source will be stored here by getInterruptType.<br> kIOInterruptTypeEdge will be returned for edge trigggered sources.<br> kIOInterruptTypeLevel will be returned for level trigggered sources.
+    @result An IOReturn code.<br>kIOReturnNoInterrupt is returned if the source is not valid. */
 
     virtual IOReturn getInterruptType(int source, int *interruptType);
 
@@ -780,7 +780,7 @@ public:
     @abstract Enable a device interrupt.
     @discussion Enable a device interrupt. It is the callers responsiblity to keep track of the enable state of the interrupt source.
     @param source The index of the interrupt source in the device.
-    @result An IOReturn code.&lt;br&gt;kIOReturnNoInterrupt is returned if the source is not valid. */
+    @result An IOReturn code.<br>kIOReturnNoInterrupt is returned if the source is not valid. */
 
     virtual IOReturn enableInterrupt(int source);
 
@@ -788,7 +788,7 @@ public:
     @abstract Disable a device interrupt.
     @discussion Disable a device interrupt. It is the callers responsiblity to keep track of the enable state of the interrupt source.
     @param source The index of the interrupt source in the device.
-    @result An IOReturn code.&lt;br&gt;kIOReturnNoInterrupt is returned if the source is not valid. */
+    @result An IOReturn code.<br>kIOReturnNoInterrupt is returned if the source is not valid. */
 
     virtual IOReturn disableInterrupt(int source);
 
@@ -796,7 +796,7 @@ public:
     @abstract Cause a device interrupt to occur.
     @discussion Emulate a hardware interrupt, to be called from task level.
     @param source The index of the interrupt source in the device.
-    @result An IOReturn code.&lt;br&gt;kIOReturnNoInterrupt is returned if the source is not valid. */
+    @result An IOReturn code.<br>kIOReturnNoInterrupt is returned if the source is not valid. */
 
     virtual IOReturn causeInterrupt(int source);
 

@@ -39,58 +39,58 @@ Enter a symbol's name here to quickly find it.
 
 
 #ifndef _IOKIT_IOKITKEYS_H
-#define <a name="_IOKIT_IOKITKEYS_H" < a><b>_IOKIT_IOKITKEYS_H</b>
+#define  _IOKIT_IOKITKEYS_H = _IOKIT_IOKITKEYS_H = 
 
 // properties found in the registry root
-#define <a name="kIOKitBuildVersionKey" < a><b>kIOKitBuildVersionKey</b>		"IOKitBuildVersion"
-#define <a name="kIOKitDiagnosticsKey" < a><b>kIOKitDiagnosticsKey</b>		"IOKitDiagnostics"
+#define  kIOKitBuildVersionKey = kIOKitBuildVersionKey = 		"IOKitBuildVersion"
+#define  kIOKitDiagnosticsKey = kIOKitDiagnosticsKey = 		"IOKitDiagnostics"
 	// a dictionary keyed by plane name
-#define <a name="kIORegistryPlanesKey" < a><b>kIORegistryPlanesKey</b>		"IORegistryPlanes"
-#define <a name="kIOCatalogueKey" < a><b>kIOCatalogueKey</b>			"IOCatalogue"
+#define  kIORegistryPlanesKey = kIORegistryPlanesKey = 		"IORegistryPlanes"
+#define  kIOCatalogueKey = kIOCatalogueKey = 			"IOCatalogue"
 
 // registry plane names
-#define <a name="kIOServicePlane" < a><b>kIOServicePlane</b>			"IOService"
-#define <a name="kIOPowerPlane" < a><b>kIOPowerPlane</b>			"IOPower"
-#define <a name="kIODeviceTreePlane" < a><b>kIODeviceTreePlane</b>		"IODeviceTree"
-#define <a name="kIOAudioPlane" < a><b>kIOAudioPlane</b>			"IOAudio"
-#define <a name="kIOFireWirePlane" < a><b>kIOFireWirePlane</b>		"IOFireWire"
+#define  kIOServicePlane = kIOServicePlane = 			"IOService"
+#define  kIOPowerPlane = kIOPowerPlane = 			"IOPower"
+#define  kIODeviceTreePlane = kIODeviceTreePlane = 		"IODeviceTree"
+#define  kIOAudioPlane = kIOAudioPlane = 			"IOAudio"
+#define  kIOFireWirePlane = kIOFireWirePlane = 		"IOFireWire"
 
 // IOService class name
-#define <a name="kIOServiceClass" < a><b>kIOServiceClass</b>			"IOService"
+#define  kIOServiceClass = kIOServiceClass = 			"IOService"
 
 // IOResources class name
-#define <a name="kIOResourcesClass" < a><b>kIOResourcesClass</b>		"IOResources"
+#define  kIOResourcesClass = kIOResourcesClass = 		"IOResources"
 
 // IOService driver probing property names
-#define <a name="kIOClassKey" < a><b>kIOClassKey</b>			"IOClass"
-#define <a name="kIOProbeScoreKey" < a><b>kIOProbeScoreKey</b>		"IOProbeScore"
-#define <a name="kIOKitDebugKey" < a><b>kIOKitDebugKey</b>			"IOKitDebug"
+#define  kIOClassKey = kIOClassKey = 			"IOClass"
+#define  kIOProbeScoreKey = kIOProbeScoreKey = 		"IOProbeScore"
+#define  kIOKitDebugKey = kIOKitDebugKey = 			"IOKitDebug"
 
 // IOService matching property names
-#define <a name="kIOProviderClassKey" < a><b>kIOProviderClassKey</b>		"IOProviderClass"
-#define <a name="kIONameMatchKey" < a><b>kIONameMatchKey</b>			"IONameMatch"
-#define <a name="kIOPathMatchKey" < a><b>kIOPathMatchKey</b>			"IOPathMatch"
-#define <a name="kIOLocationMatchKey" < a><b>kIOLocationMatchKey</b>		"IOLocationMatch"
-#define <a name="kIOResourceMatchKey" < a><b>kIOResourceMatchKey</b>		"IOResourceMatch"
+#define  kIOProviderClassKey = kIOProviderClassKey = 		"IOProviderClass"
+#define  kIONameMatchKey = kIONameMatchKey = 			"IONameMatch"
+#define  kIOPathMatchKey = kIOPathMatchKey = 			"IOPathMatch"
+#define  kIOLocationMatchKey = kIOLocationMatchKey = 		"IOLocationMatch"
+#define  kIOResourceMatchKey = kIOResourceMatchKey = 		"IOResourceMatch"
 
-#define <a name="kIONameMatchedKey" < a><b>kIONameMatchedKey</b>		"IONameMatched"
+#define  kIONameMatchedKey = kIONameMatchedKey = 		"IONameMatched"
 
-#define <a name="kIOMatchCategoryKey" < a><b>kIOMatchCategoryKey</b>		"IOMatchCategory"
-#define <a name="kIODefaultMatchCategoryKey" < a><b>kIODefaultMatchCategoryKey</b>	"IODefaultMatchCategory"
+#define  kIOMatchCategoryKey = kIOMatchCategoryKey = 		"IOMatchCategory"
+#define  kIODefaultMatchCategoryKey = kIODefaultMatchCategoryKey = 	"IODefaultMatchCategory"
 
 // IOService notification types
-#define <a name="kIOPublishNotification" < a><b>kIOPublishNotification</b>		"IOServicePublish"
-#define <a name="kIOFirstPublishNotification" < a><b>kIOFirstPublishNotification</b>	"IOServiceFirstPublish"
-#define <a name="kIOMatchedNotification" < a><b>kIOMatchedNotification</b>		"IOServiceMatched"
-#define <a name="kIOFirstMatchNotification" < a><b>kIOFirstMatchNotification</b>	"IOServiceFirstMatch"
-#define <a name="kIOTerminatedNotification" < a><b>kIOTerminatedNotification</b>	"IOServiceTerminate"
+#define  kIOPublishNotification = kIOPublishNotification = 		"IOServicePublish"
+#define  kIOFirstPublishNotification = kIOFirstPublishNotification = 	"IOServiceFirstPublish"
+#define  kIOMatchedNotification = kIOMatchedNotification = 		"IOServiceMatched"
+#define  kIOFirstMatchNotification = kIOFirstMatchNotification = 	"IOServiceFirstMatch"
+#define  kIOTerminatedNotification = kIOTerminatedNotification = 	"IOServiceTerminate"
 
 // IOService interest notification types
-#define <a name="kIOGeneralInterest" < a><b>kIOGeneralInterest</b>		"IOGeneralInterest"
-#define <a name="kIOBusyInterest" < a><b>kIOBusyInterest</b>			"IOBusyInterest"
+#define  kIOGeneralInterest = kIOGeneralInterest = 		"IOGeneralInterest"
+#define  kIOBusyInterest = kIOBusyInterest = 			"IOBusyInterest"
 
 // IOService interest notification types
-#define <a name="kIOCFPlugInTypesKey" < a><b>kIOCFPlugInTypesKey</b>		"IOCFPlugInTypes"
+#define  kIOCFPlugInTypesKey = kIOCFPlugInTypesKey = 		"IOCFPlugInTypes"
 
 
 #endif /* ! _IOKIT_IOKITKEYS_H */

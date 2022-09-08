@@ -29,29 +29,29 @@ Enter a symbol's name here to quickly find it.
  * @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="622332322e273d2e2b21272c31273d2a27232627303d272c2622">[email&#160;protected]</a>
  */
 #ifndef _IOMEMORYDESCRIPTOR_H
-#define <a name="_IOMEMORYDESCRIPTOR_H" < a><b>_IOMEMORYDESCRIPTOR_H</b>
+#define  _IOMEMORYDESCRIPTOR_H = _IOMEMORYDESCRIPTOR_H = 
 
-#include &lt;IOKit/IOTypes.h&gt;
-#include &lt;libkern/c++/OSContainers.h&gt;
+#include <IOKit/IOTypes.h>
+#include <libkern/c++/OSContainers.h>
 
-struct <a name="IOVirtualRange" < a><b>IOVirtualRange</b>
+struct  IOVirtualRange = IOVirtualRange = 
 {
     IOVirtualAddress	address;
     IOByteCount		length;
 };
 
-struct <a name="IOPhysicalRange" < a><b>IOPhysicalRange</b>
+struct  IOPhysicalRange = IOPhysicalRange = 
 {
     IOPhysicalAddress	address;
     IOByteCount		length;
 };
 
-class <a name="IOMemoryMap" < a><b>IOMemoryMap</b>;
+class  IOMemoryMap = IOMemoryMap = ;
 
 /*
  * Direction of transfer, with respect to the described memory.
  */
-enum <a name="IODirection" < a><b>IODirection</b>
+enum  IODirection = IODirection = 
 {
     kIODirectionNone  = 0,
     kIODirectionIn    = 1,
@@ -341,12 +341,12 @@ public:
     @discussion This is the general purpose method to map all or part of the memory described by a memory descriptor into a task at any available address, or at a fixed address if possible. Caching &amp; read-only options may be set for the mapping. The mapping is represented as a returned reference to a IOMemoryMap object, which may be shared if the mapping is compatible with an existing mapping of the IOMemoryDescriptor. The IOMemoryMap object returned should be released only when the caller has finished accessing the mapping, as freeing the object destroys the mapping. 
     @param intoTask Sets the target task for the mapping. Pass kernel_task for the kernel address space.
     @param atAddress If a placed mapping is requested, atAddress specifies its address, and the kIOMapAnywhere should not be set. Otherwise, atAddress is ignored.
-    @param options Mapping options are defined in IOTypes.h,&lt;br&gt;
-	kIOMapAnywhere should be passed if the mapping can be created anywhere. If not set, the atAddress parameter sets the location of the mapping, if it is available in the target map.&lt;br&gt;
-	kIOMapDefaultCache to inhibit the cache in I/O areas, kIOMapCopybackCache in general purpose RAM.&lt;br&gt;
-	kIOMapInhibitCache, kIOMapWriteThruCache, kIOMapCopybackCache to set the appropriate caching.&lt;br&gt;
-	kIOMapReadOnly to allow only read only accesses to the memory - writes will cause and access fault.&lt;br&gt;
-	kIOMapReference will only succeed if the mapping already exists, and the IOMemoryMap object is just an extra reference, ie. no new mapping will be created.&lt;br&gt;
+    @param options Mapping options are defined in IOTypes.h,<br>
+	kIOMapAnywhere should be passed if the mapping can be created anywhere. If not set, the atAddress parameter sets the location of the mapping, if it is available in the target map.<br>
+	kIOMapDefaultCache to inhibit the cache in I/O areas, kIOMapCopybackCache in general purpose RAM.<br>
+	kIOMapInhibitCache, kIOMapWriteThruCache, kIOMapCopybackCache to set the appropriate caching.<br>
+	kIOMapReadOnly to allow only read only accesses to the memory - writes will cause and access fault.<br>
+	kIOMapReference will only succeed if the mapping already exists, and the IOMemoryMap object is just an extra reference, ie. no new mapping will be created.<br>
     @param offset Is a beginning offset into the IOMemoryDescriptor's memory where the mapping starts. Zero is the default to map all the memory.
     @param length Is the length of the mapping requested for a subset of the IOMemoryDescriptor. Zero is the default to map all the memory.
     @result A reference to an IOMemoryMap object representing the mapping, which can supply the virtual address of the mapping and other information. The mapping may be shared with multiple callers - multiple maps are avoided if a compatible one exists. The IOMemoryMap object returned should be released only when the caller has finished accessing the mapping, as freeing the object destroys the mapping. The IOMemoryMap instance also retains the IOMemoryDescriptor it maps while it exists. */

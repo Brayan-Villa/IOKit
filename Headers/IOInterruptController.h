@@ -37,16 +37,16 @@ Enter a symbol's name here to quickly find it.
 
 
 #ifndef _IOKIT_IOINTERRUPTCONTROLLER_H
-#define <a name="_IOKIT_IOINTERRUPTCONTROLLER_H" < a><b>_IOKIT_IOINTERRUPTCONTROLLER_H</b>
+#define  _IOKIT_IOINTERRUPTCONTROLLER_H = _IOKIT_IOINTERRUPTCONTROLLER_H = 
 
-#include &lt;IOKit/IOLocks.h&gt;
-#include &lt;IOKit/IOService.h&gt;
-#include &lt;IOKit/IOInterrupts.h&gt;
+#include <IOKit/IOLocks.h>
+#include <IOKit/IOService.h>
+#include <IOKit/IOInterrupts.h>
 
 
-class <a name="IOSharedInterruptController" < a><b>IOSharedInterruptController</b>;
+class  IOSharedInterruptController = IOSharedInterruptController = ;
 
-struct <a name="IOInterruptVector" < a><b>IOInterruptVector</b> {
+struct  IOInterruptVector = IOInterruptVector =  {
   volatile char               interruptActive;
   volatile char               interruptDisabledSoft;
   volatile char               interruptDisabledHard;

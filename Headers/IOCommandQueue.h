@@ -40,9 +40,9 @@ HISTORY
 	Deprecated
 ]*/
 #ifndef _IOKIT_IOCOMMANDQUEUE_H
-#define <a name="_IOKIT_IOCOMMANDQUEUE_H" < a><b>_IOKIT_IOCOMMANDQUEUE_H</b>
+#define  _IOKIT_IOCOMMANDQUEUE_H = _IOKIT_IOCOMMANDQUEUE_H = 
 
-#include &lt;IOKit/IOEventSource.h&gt;
+#include <IOKit/IOEventSource.h>
 
 
 
@@ -53,10 +53,10 @@ HISTORY
 
 
 
-class <a name="IOCommandQueue" < a><b>IOCommandQueue</b>;
+class  IOCommandQueue = IOCommandQueue = ;
 
 typedef void (*IOCommandQueueAction)
-    (<a name="OSObject" < a><b>OSObject</b> *, void *<a name="field0" < a><b>field0</b>, void *<a name="field1" < a><b>field1</b>, void *<a name="field2" < a><b>field2</b>, void *<a name="field3" < a><b>field3</b>);
+    ( OSObject = OSObject =  *, void * field0 = field0 = , void * field1 = field1 = , void * field2 = field2 = , void * field3 = field3 = );
 
 class IOCommandQueue : public IOEventSource
 {

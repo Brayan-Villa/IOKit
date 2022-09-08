@@ -33,7 +33,7 @@ Enter a symbol's name here to quickly find it.
  */
 
 #ifndef __IOKIT_IOLOCKS_H
-#define <a name="__IOKIT_IOLOCKS_H" < a><b>__IOKIT_IOLOCKS_H</b>
+#define  __IOKIT_IOLOCKS_H = __IOKIT_IOLOCKS_H = 
 
 #ifndef KERNEL
 #error IOLocks.h is for kernel use only
@@ -43,24 +43,24 @@ Enter a symbol's name here to quickly find it.
 #define IOKIT_DEPRECATED	1
 #endif
 
-#include &lt;IOKit/system.h&gt;
+#include <IOKit/system.h>
 
-#include &lt;IOKit/IOReturn.h&gt;
-#include &lt;IOKit/IOTypes.h&gt;
+#include <IOKit/IOReturn.h>
+#include <IOKit/IOTypes.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#include &lt;kern/lock.h&gt;
-#include &lt;kern/simple_lock.h&gt;
-#include &lt;machine/machine_routines.h&gt;
+#include <kern/lock.h>
+#include <kern/simple_lock.h>
+#include <machine/machine_routines.h>
 
 /*
  * Mutex lock operations
  */
 
-typedef mutex_t	<a name="IOLock" < a><b>IOLock</b>;
+typedef mutex_t	 IOLock = IOLock = ;
 
 /*! @function IOLockAlloc
     @abstract Allocates and initializes an osfmk mutex.
@@ -117,10 +117,10 @@ void	IOLockUnlock( IOLock * lock)
 typedef enum {
     kIOLockStateUnlocked	= 0,
     kIOLockStateLocked		= 1,
-} <a name="IOLockState" < a><b>IOLockState</b>;
+}  IOLockState = IOLockState = ;
 
 void	IOLockInitWithState( IOLock * lock, IOLockState state);
-#define	<a name="IOLockInit" < a><b>IOLockInit</b>( l )	IOLockInitWithState( l, kIOLockStateUnlocked);
+#define	 IOLockInit = IOLockInit = ( l )	IOLockInitWithState( l, kIOLockStateUnlocked);
 
 static __inline__ void IOTakeLock( IOLock * lock) { IOLockLock(lock); 	     }
 static __inline__ boolean_t IOTryLock(  IOLock * lock) { return(IOLockTryLock(lock)); }
@@ -132,7 +132,7 @@ static __inline__ void IOUnlock(   IOLock * lock) { IOLockUnlock(lock);	     }
  * Recursive lock operations
  */
 
-typedef struct _<a name="IORecursiveLock" < a><b>IORecursiveLock</b> IORecursiveLock;
+typedef struct _ IORecursiveLock = IORecursiveLock =  IORecursiveLock;
 
 /*! @function IORecursiveLockAlloc
     @abstract Allocates and initializes an recursive lock.
@@ -182,7 +182,7 @@ boolean_t	IORecursiveLockHaveLock( const IORecursiveLock * lock);
  * Complex (read/write) lock operations
  */
 
-typedef lock_t	<a name="IORWLock" < a><b>IORWLock</b>;
+typedef lock_t	 IORWLock = IORWLock = ;
 
 /*! @function IORWLockAlloc
     @abstract Allocates and initializes an osfmk general (read/write) lock.
@@ -246,7 +246,7 @@ static __inline__ void IORWUnlock(   IORWLock * lock) { IORWLockUnlock(lock); }
  * Simple locks. Cannot block while holding a simple lock.
  */
 
-typedef simple_lock_data_t <a name="IOSimpleLock" < a><b>IOSimpleLock</b>;
+typedef simple_lock_data_t  IOSimpleLock = IOSimpleLock = ;
 
 /*! @function IOSimpleLockAlloc
     @abstract Allocates and initializes an osfmk simple (spin) lock.
@@ -303,7 +303,7 @@ void IOSimpleLockUnlock( IOSimpleLock * lock )
     simple_unlock( lock );
 }
 
-typedef long int <a name="IOInterruptState" < a><b>IOInterruptState</b>;
+typedef long int  IOInterruptState = IOInterruptState = ;
 
 /*! @function IOSimpleLockLockDisableInterrupt
     @abstract Lock an osfmk simple lock.

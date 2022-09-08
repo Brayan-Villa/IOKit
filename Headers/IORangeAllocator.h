@@ -38,12 +38,12 @@ Enter a symbol's name here to quickly find it.
  */
 
 #ifndef _IOKIT_IORANGEALLOCATOR_H
-#define <a name="_IOKIT_IORANGEALLOCATOR_H" < a><b>_IOKIT_IORANGEALLOCATOR_H</b>
+#define  _IOKIT_IORANGEALLOCATOR_H = _IOKIT_IORANGEALLOCATOR_H = 
 
-#include &lt;libkern/c++/OSObject.h&gt;
-#include &lt;IOKit/IOTypes.h&gt;
+#include <libkern/c++/OSObject.h>
+#include <IOKit/IOTypes.h>
 
-typedef UInt32 <a name="IORangeScalar" < a><b>IORangeScalar</b>;
+typedef UInt32  IORangeScalar = IORangeScalar = ;
 
 /*! @class IORangeAllocator : public OSObject
     @abstract A utility class to manage allocations from a range.

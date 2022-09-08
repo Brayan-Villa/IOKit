@@ -36,18 +36,18 @@ HISTORY
 	Created.
 */
 #ifndef _IOKIT_IOFILTERINTERRUPTEVENTSOURCE_H
-#define <a name="_IOKIT_IOFILTERINTERRUPTEVENTSOURCE_H" < a><b>_IOKIT_IOFILTERINTERRUPTEVENTSOURCE_H</b>
+#define  _IOKIT_IOFILTERINTERRUPTEVENTSOURCE_H = _IOKIT_IOFILTERINTERRUPTEVENTSOURCE_H = 
 
-#include &lt;IOKit/IOInterruptEventSource.h&gt;
+#include <IOKit/IOInterruptEventSource.h>
 
 class IOService;
 
 /*! @class IOFilterInterruptEventSource : public IOInterruptEventSource
     @abstract Filtering varient of the $link IOInterruptEventSource.
     @discussion An interrupt event source that calls the client to determine if a interrupt event needs to be scheduled on the work loop.  A filter interrupt event source call's the client in the primary interrupt context, the client can then interrogate it's hardware and determine if the interrupt needs to be processed yet.
-&lt;br&gt;&lt;br&gt;
+<br><br>
     As the routine is called in the primary interrupt context great care must be taken in the writing of this routine.  In general none of the generic IOKit environment is safe to call in this context.  We intend this routine to be used by hardware that can interrogate it's registers without destroying state.  Primarily this variant of event sources will be used by drivers that share interrupts.  The filter routine will determine if the interrupt is a real interrupt or a ghost and thus optimise the work thread context switch away.
-&lt;br&gt;&lt;br&gt;
+<br><br>
     CAUTION:  Called in primary interrupt context, if you need to disable interrupt to guard you registers against an unexpected call then it is better to use a straight IOInterruptEventSource and it's secondary interrupt delivery mechanism.
 */
 class IOFilterInterruptEventSource : public IOInterruptEventSource
@@ -61,11 +61,11 @@ public:
     @param owner Pointer to the owning/client instance.
     @param sender Where is the interrupt comming from.
     @result false if this interrupt can be ignored. */
-    typedef bool (*Filter)(OSObject *, <a name="IOFilterInterruptEventSource" < a><b>IOFilterInterruptEventSource</b> *);
+    typedef bool (*Filter)(OSObject *,  IOFilterInterruptEventSource = IOFilterInterruptEventSource =  *);
 
 /*! @defined IOFilterInterruptAction
     @discussion Backward compatibilty define for the old non-class scoped type definition.  See $link IOFilterInterruptSource::Filter */
-#define <a name="IOFilterInterruptAction" < a><b>IOFilterInterruptAction</b> IOFilterInterruptEventSource::Filter
+#define  IOFilterInterruptAction = IOFilterInterruptAction =  IOFilterInterruptEventSource::Filter
 
 private:
     // Hide the superclass initializers

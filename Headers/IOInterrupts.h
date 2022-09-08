@@ -37,17 +37,17 @@ Enter a symbol's name here to quickly find it.
 
 
 #ifndef _IOKIT_IOINTERRUPTS_H
-#define <a name="_IOKIT_IOINTERRUPTS_H" < a><b>_IOKIT_IOINTERRUPTS_H</b>
+#define  _IOKIT_IOINTERRUPTS_H = _IOKIT_IOINTERRUPTS_H = 
 
-#define <a name="kIOInterruptTypeEdge" < a><b>kIOInterruptTypeEdge</b>  (0)
-#define <a name="kIOInterruptTypeLevel" < a><b>kIOInterruptTypeLevel</b> (1)
+#define  kIOInterruptTypeEdge = kIOInterruptTypeEdge =   (0)
+#define  kIOInterruptTypeLevel = kIOInterruptTypeLevel =  (1)
 
 #ifdef __cplusplus
 
-class <a name="OSData" < a><b>OSData</b>;
-class <a name="IOInterruptController" < a><b>IOInterruptController</b>;
+class  OSData = OSData = ;
+class  IOInterruptController = IOInterruptController = ;
 
-struct <a name="IOInterruptSource" < a><b>IOInterruptSource</b> {
+struct  IOInterruptSource = IOInterruptSource =  {
   IOInterruptController *interruptController;
   OSData                *vectorData;
 };
@@ -55,8 +55,8 @@ typedef struct IOInterruptSource IOInterruptSource;
 
 #endif /* __cplusplus */
 
-typedef void (*IOInterruptHandler)(void *<a name="target" < a><b>target</b>, void *<a name="refCon" < a><b>refCon</b>,
-				   void *<a name="nub" < a><b>nub</b>, int source);
+typedef void (*IOInterruptHandler)(void * target = target = , void * refCon = refCon = ,
+				   void * nub = nub = , int source);
 
 #endif /* ! _IOKIT_IOINTERRUPTS_H */
 

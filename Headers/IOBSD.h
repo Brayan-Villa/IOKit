@@ -20,17 +20,17 @@
  * @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c78697978b82988b8e8482899482988f82868382959882898387">[email&#160;protected]</a>
  */
 #ifndef _IOBSD_H
-#define <a name="_IOBSD_H" < a><b>_IOBSD_H</b>
+#define  _IOBSD_H = _IOBSD_H = 
 
 /*
  * bsd-related registry properties
  */
 
-#define <a name="kIOBSDName" < a><b>kIOBSDName</b>  "BSD Name"     // (an OSString)
-#define <a name="kIOBSDNames" < a><b>kIOBSDNames</b> "BSD Names"    // (an OSDictionary of OSString's, for links)
-#define <a name="kIOBSDMajor" < a><b>kIOBSDMajor</b> "BSD Major"    // (an OSNumber)
-#define <a name="kIOBSDMinor" < a><b>kIOBSDMinor</b> "BSD Minor"    // (an OSNumber)
-#define <a name="kIOBSDUnit" < a><b>kIOBSDUnit</b>  "BSD Unit"     // (an OSNumber)
+#define  kIOBSDName = kIOBSDName =   "BSD Name"     // (an OSString)
+#define  kIOBSDNames = kIOBSDNames =  "BSD Names"    // (an OSDictionary of OSString's, for links)
+#define  kIOBSDMajor = kIOBSDMajor =  "BSD Major"    // (an OSNumber)
+#define  kIOBSDMinor = kIOBSDMinor =  "BSD Minor"    // (an OSNumber)
+#define  kIOBSDUnit = kIOBSDUnit =   "BSD Unit"     // (an OSNumber)
 
 #endif /* !_IOBSD_H */
 

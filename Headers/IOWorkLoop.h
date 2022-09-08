@@ -29,23 +29,23 @@ HISTORY
 */
 
 #ifndef __IOKIT_IOWORKLOOP_H
-#define <a name="__IOKIT_IOWORKLOOP_H" < a><b>__IOKIT_IOWORKLOOP_H</b>
+#define  __IOKIT_IOWORKLOOP_H = __IOKIT_IOWORKLOOP_H = 
 
-#include &lt;libkern/c++/OSObject.h&gt;
-#include &lt;IOKit/IOReturn.h&gt;
-#include &lt;IOKit/IOLib.h&gt;
-#include &lt;IOKit/IOLocks.h&gt;
+#include <libkern/c++/OSObject.h>
+#include <IOKit/IOReturn.h>
+#include <IOKit/IOLib.h>
+#include <IOKit/IOLocks.h>
 
-#include &lt;IOKit/system.h&gt;
+#include <IOKit/system.h>
 
-class <a name="IOEventSource" < a><b>IOEventSource</b>;
-class <a name="IOCommandGate" < a><b>IOCommandGate</b>;
+class  IOEventSource = IOEventSource = ;
+class  IOCommandGate = IOCommandGate = ;
 
 /*! @class IOWorkLoop : public OSObject
     @discussion An IOWorkLoop is a thread of control that is intended to be used to provide single threaded access to hardware.	 This class has no knowledge of the nature and type of the events that it marshals and forwards.  When an device driver sucessfully starts, See $link IOService::start it is expected to create the event sources it will need to receive events from.	Then a work loop is initialised and the events are added to the work loop for monitoring.  In general this set up will be automated by the family superclass of the specific device.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 	The thread main method walks the event source linked list and messages each one requesting a work check.  At this point each event source is expected to notify their registered owner that the event has occured.  After each event has been walked and they indicate that another loop isn't required by the 'more' flag being false the thread will go to sleep on a signaling semaphore.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 	When an event source is registered with a work loop it is informed of the semaphore to use to wake up the loop.*/
 class IOWorkLoop : public OSObject
 {
@@ -67,7 +67,7 @@ protected:
     @enum 
     @constant mAddEvent Used to tag a Remove event source command.
     @constant mRemoveEvent Used to tag a Remove event source command. */    
-    typedef enum { mAddEvent, mRemoveEvent } <a name="maintCommandEnum" < a><b>maintCommandEnum</b>;
+    typedef enum { mAddEvent, mRemoveEvent }  maintCommandEnum = maintCommandEnum = ;
 
 /*! @var gateLock
     Mutual exlusion lock that used by close and open Gate functions.  */
@@ -101,7 +101,7 @@ protected:
 
 /*! @function free
     @discussion Mandatory free of the object independent of the current retain count.  If the work loop is running this method will not return until the thread has succefully terminated.  Each event source in the chain will be released and the working semaphore will be destroyed.
-&lt;br&gt;&lt;br&gt;
+<br><br>
 	If the client has some outstanding requests on an event they will never be informed of completion.	If an external thread is blocked on any of the event sources they will be awoken with a KERN_INTERUPTED status. */
     virtual void free();
 
